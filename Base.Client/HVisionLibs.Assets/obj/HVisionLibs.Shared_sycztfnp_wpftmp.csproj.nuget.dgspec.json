@@ -1,0 +1,174 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Assets\\HVisionLibs.Shared.csproj": {}
+  },
+  "projects": {
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Assets\\HVisionLibs.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Assets\\HVisionLibs.Shared.csproj",
+        "projectName": "HVisionLibs.Shared",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Assets\\HVisionLibs.Shared.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Assets\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\HVisionLibs.Core.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\HVisionLibs.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Xceed.Wpf.Themes.MaterialDesign": {
+              "target": "Package",
+              "version": "[4.5.23158.1451, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\HVisionLibs.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\HVisionLibs.Core.csproj",
+        "projectName": "HVisionLibs.Core",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\HVisionLibs.Core.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\HVisionLibs.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

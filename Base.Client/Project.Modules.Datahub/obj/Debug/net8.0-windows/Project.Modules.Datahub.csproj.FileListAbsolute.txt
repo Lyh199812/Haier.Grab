@@ -1,0 +1,12 @@
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\bin\Debug\net8.0-windows\Project.Modules.Datahub.deps.json
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\bin\Debug\net8.0-windows\Project.Modules.Datahub.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\bin\Debug\net8.0-windows\Project.Modules.Datahub.pdb
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.AssemblyInfoInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.AssemblyInfo.cs
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.csproj.CoreCompileInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.sourcelink.json
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\refint\Project.Modules.Datahub.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\Project.Modules.Datahub.pdb
+E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.Datahub\obj\Debug\net8.0-windows\ref\Project.Modules.Datahub.dll

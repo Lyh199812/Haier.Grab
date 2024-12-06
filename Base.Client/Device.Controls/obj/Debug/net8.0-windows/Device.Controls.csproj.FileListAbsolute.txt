@@ -1,0 +1,17 @@
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\bin\Debug\net8.0-windows\Device.Controls.deps.json
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\bin\Debug\net8.0-windows\Device.Controls.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\bin\Debug\net8.0-windows\Device.Controls.pdb
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\TcpServerView.g.cs
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls_MarkupCompile.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls_MarkupCompile.lref
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\TcpServerView.baml
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.g.resources
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.AssemblyInfoInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.AssemblyInfo.cs
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.csproj.CoreCompileInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.sourcelink.json
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\refint\Device.Controls.dll
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.Controls.pdb
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Controls\obj\Debug\net8.0-windows\ref\Device.Controls.dll

@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:control="clr-namespace:HVisionLibs.Shared.Controls"
+                    xmlns:halcon="clr-namespace:HalconDotNet;assembly=HalconDotNet"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="control:ImageEditView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="control:ImageEditView">
+                    <Grid Background="Black">
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="形状">
+                                    <MenuItem x:Name="PART_RECT" Header="绘制矩形" />
+                                    <MenuItem x:Name="PART_Ellipse" Header="绘制椭圆" />
+                                    <MenuItem x:Name="PART_Circle" Header="绘制圆形" />
+                                    <MenuItem x:Name="PART_Region" Header="绘制区域" />
+                                </MenuItem>
+                                <MenuItem x:Name="PART_MASK" Header="创建掩模" />
+                                <MenuItem x:Name="PART_ClearAll" Header="清除所有" />
+                                <MenuItem x:Name="PART_CreatShapModel" Header="创建形状模板" />
+                            </ContextMenu>
+                        </Grid.ContextMenu>
+
+                        <TextBlock x:Name="PART_MEG"
+                                   Margin="5"
+                                   Panel.ZIndex="1"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Foreground="White" />
+
+                        <halcon:HSmartWindowControlWPF x:Name="PART_SMART" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ResourceDictionary.MergedDictionaries>
+        <materialDesign:BundledTheme
+            BaseTheme="Dark"
+            PrimaryColor="DeepPurple"
+            SecondaryColor="Amber"/>
+        <!-- 其他资源字典可以在这里添加 -->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

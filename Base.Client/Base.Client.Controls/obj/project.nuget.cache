@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "806GwF3tlN0=",
+  "success": true,
+  "projectFilePath": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Base.Client.Controls\\Base.Client.Controls.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LYH\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512"
+  ],
+  "logs": []
+}

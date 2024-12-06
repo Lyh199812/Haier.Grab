@@ -1,0 +1,614 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.SystemModule\\Base.Client.SystemModule.csproj": {}
+  },
+  "projects": {
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj",
+        "projectName": "Base.Client.Assets",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.135, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj",
+        "projectName": "Base.Client.BLL",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj",
+        "projectName": "Base.Client.Common",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\Base.Client.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\Base.Client.DAL.csproj",
+        "projectName": "Base.Client.DAL",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\Base.Client.DAL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.119, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj",
+        "projectName": "Base.Client.Entity",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj",
+        "projectName": "Base.Client.IBLL",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj",
+        "projectName": "Base.Client.IDAL",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.SystemModule\\Base.Client.SystemModule.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.SystemModule\\Base.Client.SystemModule.csproj",
+        "projectName": "Base.Client.SystemModule",
+        "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.SystemModule\\Base.Client.SystemModule.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.SystemModule\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\Base.Client.DAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.DAL\\Base.Client.DAL.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IBLL\\Base.Client.IBLL.csproj"
+              },
+              "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\ZhaoXi.SmartParking\\Base.Client\\Base.Client.IDAL\\Base.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

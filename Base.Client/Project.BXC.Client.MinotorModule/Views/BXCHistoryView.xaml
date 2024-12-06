@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="BXC.Client.MinotorModule.Views.BXCHistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BXC.Client.MinotorModule.Views"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="900">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+            <!-- 查询条件区域 -->
+            <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="0" HorizontalAlignment="Left">
+                <Label Content="开始时间:" VerticalAlignment="Center"/>
+                <DatePicker x:Name="StartDatePicker" Width="120" Margin="5,0" SelectedDate="{Binding StartDate, Mode=TwoWay}"/>
+                <xctk:TimePicker Width="80" Margin="5,0" Value="{Binding StartTime, Mode=TwoWay}"/>
+
+                <Label Content="结束时间:" VerticalAlignment="Center"/>
+                <DatePicker x:Name="EndDatePicker" Width="120" Margin="5,0" SelectedDate="{Binding EndDate, Mode=TwoWay}"/>
+                <xctk:TimePicker Width="80" Margin="5,0" Value="{Binding EndTime, Mode=TwoWay}"/>
+
+                <Label Content="SN:" VerticalAlignment="Center"/>
+                <TextBox x:Name="SnTextBox" Width="150" Margin="5,0" Text="{Binding SN, Mode=TwoWay}"/>
+                <Button Content="查询" Width="80" Margin="10,0" Command="{Binding SearchCommand}"/>
+            </StackPanel>
+            <!-- 数据表格区域 -->
+            <DataGrid x:Name="BxcRecordDataGrid" ItemsSource="{Binding FilteredRecords, Mode=OneWay}"
+          Grid.Row="1"
+          AutoGenerateColumns="False"
+          Margin="10"
+          IsReadOnly="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id}" Width="40"/>
+                    <DataGridTextColumn Header="SN" Binding="{Binding SN}" Width="*"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Time}" Width="*"/>
+                    <DataGridTextColumn Header="重量" Binding="{Binding Weight}" Width="0.7*"/>
+                    <DataGridTextColumn Header="最大重量" Binding="{Binding MaxWeight}" Width="0.7*"/>
+                    <DataGridTextColumn Header="最小重量" Binding="{Binding MinWeight}" Width="0.7*"/>
+                    <DataGridTextColumn Header="运行模式" Binding="{Binding Mode}" Width="0.7*"/>
+                    <DataGridTextColumn Header="测试结果" Binding="{Binding TestResult}" Width="0.5*"/>
+                    <DataGridTextColumn Header="错误信息" Binding="{Binding ErrorInfo}" Width="1.5*"/>
+                    <DataGridTextColumn Header="MESSendMsg" Binding="{Binding MESSendMsg}" Width="1.5*"/>
+                    <DataGridTextColumn Header="MESRecMsg" Binding="{Binding MESRecMsg}" Width="1.5*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+            <StackPanel Grid.Row="2" Margin="10" Orientation="Horizontal">
+                <Button Content="导出搜索数据" Command="{Binding SaveCommand}" Height="30"  Width="120" FontSize="16"/>
+                <Button Content="清空数据-建议1月1清" Margin="10,0" Command="{Binding ClearTableCommand}" Height="30"  Width="320" FontSize="16"/>
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,346 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Base.Client.Controls">
+
+
+    <Style x:Key="ProductionInfoCardStyle" TargetType="local:ProductionInfoCard">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ProductionInfoCard">
+                    <Border Background="White" Padding="16" CornerRadius="20" Margin="12" BorderBrush="#cccccc" BorderThickness="1">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#000000" Direction="315" ShadowDepth="5" Opacity="0.2" BlurRadius="10"/>
+                        </Border.Effect>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1.2*"/>
+                                <RowDefinition Height="1.5*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                           
+                            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                <TextBlock Text="生产数量：" Foreground="#333" />
+                                <TextBlock Text="{Binding ProductionCount}" Foreground="#808080" />
+                                <TextBlock Text="不合格数量：" Foreground="#333" Margin="50,0,5,0"/>
+                                <TextBlock Text="{Binding DefectiveCount}" Foreground="Red" />
+                            </StackPanel>
+
+                            <DockPanel Grid.Row="1">
+                                <TextBlock Text="   合格率：" Foreground="#333" VerticalAlignment="Center" />
+                                <ProgressBar Value="{Binding PassRate}">
+                                    <ProgressBar.Style>
+                                        <Style TargetType="{x:Type ProgressBar}">
+                                            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                                            <Setter Property="SnapsToDevicePixels" Value="True"/>
+                                            <Setter Property="Height" Value="15"/>
+                                            <Setter Property="Background" Value="#6fae5f"/>
+                                            <Setter Property="FontSize" Value="10"/>
+                                            <Setter Property="Padding" Value="5,0"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                                                        <Grid Background="#00000000">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <VisualStateManager.VisualStateGroups>
+                                                                <VisualStateGroup x:Name="CommonStates">
+                                                                    <VisualState x:Name="Determinate"/>
+                                                                    <VisualState x:Name="Indeterminate">
+                                                                        <Storyboard RepeatBehavior="Forever">
+                                                                            <PointAnimationUsingKeyFrames Storyboard.TargetName="Animation" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+                                                                                <EasingPointKeyFrame KeyTime="0:0:0" Value="0.5,0.5"/>
+                                                                                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="1.95,0.5"/>
+                                                                                <EasingPointKeyFrame KeyTime="0:0:3" Value="0.5,0.5"/>
+                                                                            </PointAnimationUsingKeyFrames>
+                                                                        </Storyboard>
+                                                                    </VisualState>
+                                                                </VisualStateGroup>
+                                                            </VisualStateManager.VisualStateGroups>
+                                                            <Grid Height="{TemplateBinding Height}">
+                                                                <Border Background="#000000" CornerRadius="7.5" Opacity="0.05"/>
+                                                                <Border BorderBrush="#000000" BorderThickness="1" CornerRadius="7.5" Opacity="0.1"/>
+                                                                <Grid Margin="{TemplateBinding BorderThickness}">
+                                                                    <Border x:Name="PART_Track"/>
+                                                                    <Grid x:Name="PART_Indicator" ClipToBounds="True" HorizontalAlignment="Left">
+                                                                        <Grid.ColumnDefinitions>
+                                                                            <ColumnDefinition x:Name="width1"/>
+                                                                            <ColumnDefinition x:Name="width2" Width="0"/>
+                                                                        </Grid.ColumnDefinitions>
+                                                                        <Grid x:Name="Animation" RenderTransformOrigin="0.5,0.5">
+                                                                            <Grid.RenderTransform>
+                                                                                <TransformGroup>
+                                                                                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                                                                                    <SkewTransform AngleY="0" AngleX="0"/>
+                                                                                    <RotateTransform Angle="180"/>
+                                                                                    <TranslateTransform/>
+                                                                                </TransformGroup>
+                                                                            </Grid.RenderTransform>
+                                                                            <Border Background="{TemplateBinding Background}" CornerRadius="7.5">
+                                                                                <Viewbox HorizontalAlignment="Left" StretchDirection="DownOnly" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                                                                    <TextBlock Foreground="#ffffff" SnapsToDevicePixels="True" FontSize="{TemplateBinding FontSize}" VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Value,StringFormat={}{0}%}" RenderTransformOrigin="0.5,0.5">
+                                                                                        <TextBlock.RenderTransform>
+                                                                                            <TransformGroup>
+                                                                                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                                                                                <SkewTransform AngleY="0" AngleX="0"/>
+                                                                                                <RotateTransform Angle="0"/>
+                                                                                                <TranslateTransform/>
+                                                                                            </TransformGroup>
+                                                                                        </TextBlock.RenderTransform>
+                                                                                    </TextBlock>
+                                                                                </Viewbox>
+                                                                            </Border>
+                                                                            <Border BorderBrush="#000000" BorderThickness="1" CornerRadius="7.5" Opacity="0.1"/>
+                                                                        </Grid>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            
+                                        </Style>
+                                    </ProgressBar.Style>
+                                </ProgressBar>
+
+                            </DockPanel>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="5">
+                                <TextBlock Text="更新时间：" Foreground="#333" />
+                                <TextBlock Text="{Binding UpdateTime}" Foreground="#808080" />
+                                <TextBlock Text="开始时间：" Foreground="#333" Margin="30,0,0,0"/>
+                                <TextBlock Text="{Binding StartTime}" Foreground="#808080" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+    <!--<Style x:Key="ProductionInfoCardStyle" TargetType="local:ProductionInfoCard">
+        --><!-- 控件的外观样式 --><!--
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ProductionInfoCard">
+                    <Border Style="{StaticResource InfoCardStyle}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1.2*"/>
+                                <RowDefinition Height="1.5*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                <TextBlock Text="生产数量：" Style="{StaticResource LabelStyle}" />
+                                <TextBlock Text="{Binding ProductionCount}" Style="{StaticResource ValueStyle}" Foreground="Green" />
+                                <TextBlock Text="不合格数量：" Style="{StaticResource LabelStyle}" Margin="50,0,5,0"/>
+                                <TextBlock Text="{Binding DefectiveCount}" Style="{StaticResource RedValueStyle}" />
+                            </StackPanel>
+
+                            <DockPanel Grid.Row="1">
+                                <TextBlock Text="   合格率：" Style="{StaticResource LabelStyle}" />
+                                <ProgressBar Value="{Binding PassRate}" Maximum="100" Width="Auto" />
+                            </DockPanel>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="5">
+                                <TextBlock Text="更新时间：" Style="{StaticResource LabelStyle}" />
+                                <TextBlock Text="{Binding UpdateTime}" Style="{StaticResource ValueStyle}" />
+                                <TextBlock Text="开始时间：" Style="{StaticResource LabelStyle}" Margin="30,0,0,0"/>
+                                <TextBlock Text="{Binding StartTime}" Style="{StaticResource ValueStyle}" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style x:Key="InfoCardStyle" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#f0f0f0" Offset="0.0"/>
+                    <GradientStop Color="#ffffff" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="16"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="BorderBrush" Value="#cccccc"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="#000000" Direction="315" ShadowDepth="5" Opacity="0.2" BlurRadius="10"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LabelStyle" TargetType="TextBlock">
+        <Setter Property="Foreground"  Value="#333"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ValueStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#808080"/>
+    </Style>
+
+    <Style x:Key="RedValueStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Red"/>
+    </Style>
+
+    <Style TargetType="{x:Type ProgressBar}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Height" Value="15"/>
+        <Setter Property="Background" Value="#6fae5f"/>
+        <Setter Property="Padding" Value="5,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ProgressBar}">
+                    <Grid Background="#00000000">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Determinate"/>
+                                <VisualState x:Name="Indeterminate">
+                                    <Storyboard RepeatBehavior="Forever">
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="Animation" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+                                            <EasingPointKeyFrame KeyTime="0:0:0" Value="0.5,0.5"/>
+                                            <EasingPointKeyFrame KeyTime="0:0:1.5" Value="1.95,0.5"/>
+                                            <EasingPointKeyFrame KeyTime="0:0:3" Value="0.5,0.5"/>
+                                        </PointAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Grid Height="{TemplateBinding Height}">
+                            <Border Background="#000000" CornerRadius="7.5" Opacity="0.05"/>
+                            <Border BorderBrush="#000000" BorderThickness="1" CornerRadius="7.5" Opacity="0.1"/>
+                            <Grid Margin="{TemplateBinding BorderThickness}">
+                                <Border x:Name="PART_Track"/>
+                                <Grid x:Name="PART_Indicator" ClipToBounds="True" HorizontalAlignment="Left" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition x:Name="width1"/>
+                                        <ColumnDefinition x:Name="width2" Width="0"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid x:Name="Animation"  RenderTransformOrigin="0.5,0.5">
+                                        <Grid.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                                                <SkewTransform AngleY="0" AngleX="0"/>
+                                                <RotateTransform Angle="180"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Grid.RenderTransform>
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="7.5">
+                                            <Viewbox HorizontalAlignment="Left" StretchDirection="DownOnly" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                                <TextBlock Foreground="#ffffff" SnapsToDevicePixels="True"  VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Value,StringFormat={}{0}%}" RenderTransformOrigin="0.5,0.5">
+                                                    <TextBlock.RenderTransform>
+                                                        <TransformGroup>
+                                                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                                            <SkewTransform AngleY="0" AngleX="0"/>
+                                                            <RotateTransform Angle="0"/>
+                                                            <TranslateTransform/>
+                                                        </TransformGroup>
+                                                    </TextBlock.RenderTransform>
+                                                </TextBlock>
+                                            </Viewbox>
+                                        </Border>
+                                        <Border BorderBrush="#000000" BorderThickness="1" CornerRadius="7.5" Opacity="0.1"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="#c5c5c5"/>
+                        </Trigger>
+                        <Trigger Property="IsIndeterminate" Value="true">
+                            <Setter TargetName="width1" Property="Width" Value="0.25*"/>
+                            <Setter TargetName="width2" Property="Width" Value="0.725*"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="Button" x:Key="ButtonStyle">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF0ABEFF" Offset="0.0"/>
+                    <GradientStop Color="#FF38B6FF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="#000000" Direction="270" ShadowDepth="4" Opacity="0.3" BlurRadius="6"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    --><!--外层 Border 应用 CornerRadius--><!--
+                    <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                        --><!--内层 Border 用于内容显示--><!--
+                        <Border Background="Transparent" Name="back" CornerRadius="8">
+                            <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FF38B6FF" Offset="0.0"/>
+                                        <GradientStop Color="#FF0ABEFF" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Color="#000000" Direction="270" ShadowDepth="6" Opacity="0.4" BlurRadius="8"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#1A73E8"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Color="#000000" Direction="270" ShadowDepth="4" Opacity="0.2" BlurRadius="4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+</ResourceDictionary>

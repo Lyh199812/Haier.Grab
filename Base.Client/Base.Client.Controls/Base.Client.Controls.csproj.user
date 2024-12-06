@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoCand\ProductionInfoCardStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Loading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LogControl\LogListBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pagination.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,202 @@
+﻿<Window x:Class="Base.Client.Views.WinLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Base.Client.Views"
+        xmlns:xxx="clr-namespace:Base.Client"
+        xmlns:zxc="clr-namespace:Base.Client.Controls;assembly=Base.Client.Controls"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d" 
+        WindowStartupLocation="CenterScreen" 
+        Background="Transparent"
+        ResizeMode="NoResize"
+        FontFamily="Microsoft YaHei" FontWeight="ExtraLight" FontSize="12"
+        Title="用户登录" Height="300" Width="480">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" CornerRadius="40"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="pack://application:,,,/Base.Client.Assets;component/Styles/ButtonStyles.xaml"/>
+
+
+                <ResourceDictionary>
+                    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+                    <xxx:Bool2BlurConverter x:Key="Bool2BlurConverter"/>
+
+                    <!--样式有没有必要写到统一资源里？-->
+                    <Style TargetType="TextBox" x:Key="UsernameTextBoxStyle">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                    <Border x:Name="border" BorderBrush="#DDD"
+                                    BorderThickness="0,0,0,1" 
+                                    Background="{TemplateBinding Background}" 
+                                    SnapsToDevicePixels="True">
+                                        <Grid>
+                                            <TextBlock Text="账号/手机号/邮箱" Grid.Column="1"
+                                           VerticalAlignment="Center" Foreground="#DDD"
+                                           Name="markText" Visibility="Collapsed" FontSize="12" 
+                                           Margin="2,0"/>
+                                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                                                  HorizontalScrollBarVisibility="Hidden" 
+                                                  VerticalScrollBarVisibility="Hidden"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center" MinHeight="20"/>
+                                        </Grid>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="BorderBrush" TargetName="border" Value="#0b3d90"/>
+                                        </Trigger>
+                                        <Trigger Property="IsKeyboardFocused" Value="true">
+                                            <Setter Property="BorderBrush" TargetName="border" Value="#0b3d90"/>
+                                        </Trigger>
+                                        <DataTrigger Binding="{Binding Path=Text,RelativeSource={RelativeSource Mode=Self}}" Value="">
+                                            <Setter Property="Visibility" TargetName="markText" Value="Visible"/>
+                                        </DataTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                    <Style x:Key="PasswordBoxStyle" TargetType="{x:Type PasswordBox}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                    <Border x:Name="border" BorderBrush="#DDD"
+                                    BorderThickness="0,0,0,1" 
+                                    Background="{TemplateBinding Background}" 
+                                    SnapsToDevicePixels="True">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="20"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="请输入密码" VerticalAlignment="Center" Foreground="#DDD" Visibility="Collapsed"
+                                           Name="markText"/>
+
+                                            <!--用来显示密文  * -->
+                                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                                                  HorizontalScrollBarVisibility="Hidden" 
+                                                  VerticalScrollBarVisibility="Hidden"
+                                                  VerticalAlignment="Center" MinHeight="20"/>
+
+                                            <!--用来显示是明文-->
+                                            <TextBox Text="{Binding UserInfo.Password,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" BorderThickness="0" Name="textBox" Visibility="Collapsed" Background="Transparent"/>
+
+                                            <!--眼睛的样式修改，修改此控件的模板-->
+                                            <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Name="checkBox"/>
+                                        </Grid>
+                                    </Border>
+
+
+
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="BorderBrush" TargetName="border" Value="#0b3d90"/>
+                                        </Trigger>
+                                        <Trigger Property="IsKeyboardFocused" Value="true">
+                                            <Setter Property="BorderBrush" TargetName="border" Value="#0b3d90"/>
+                                        </Trigger>
+                                        <DataTrigger Binding="{Binding Path=UserInfo.Password}" Value="">
+                                            <Setter Property="Visibility" TargetName="markText" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=checkBox,Path=IsChecked}" Value="True">
+                                            <Setter TargetName="textBox" Property="Visibility" Value="Visible"/>
+                                            <Setter TargetName="PART_ContentHost" Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+
+                    <Style TargetType="Hyperlink">
+                        <Setter Property="FontSize" Value="11"/>
+                        <Setter Property="Foreground" Value="#AAA"/>
+                        <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Blue"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid Effect="{Binding IsLoading,Converter={StaticResource Bool2BlurConverter}}">
+            <!--<Image Source="/Base.Client.Assets;component/Images/login_back.jpg"/>-->
+            <!--<Button Content="登录" Click="Button_Click"/>-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Base.Client.Assets;component/Images/login_back.jpg" Stretch="Fill"/>
+                </Grid.Background>
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,60,0,0">
+                    <TextBlock Text="欢迎使用" Foreground="#AAFFFFFF" Margin="0,10"/>
+                    <TextBlock Text="XX管理系统" Foreground="White" FontSize="15"/>
+                </StackPanel>
+                <TextBlock Text="2022 © ZHAOXIEDU" Foreground="#88FFFFFF" VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center" FontSize="8" Margin="0,5"/>
+            </Grid>
+
+            <Grid Grid.Column="1" VerticalAlignment="Center" Margin="30,0,30,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="用户登录" Foreground="#0b3d90" FontSize="13" Margin="0,10" FontWeight="Normal"/>
+
+                <TextBlock Text="账号" Grid.Row="1" Foreground="#CC0b3d90" Margin="0,10,0,5" FontWeight="Normal"/>
+                <TextBox Grid.Row="2" Height="26" Style="{StaticResource UsernameTextBoxStyle}"
+                     Text="{Binding UserInfo.UserName,UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="密码" Grid.Row="3" Foreground="#CC0b3d90" Margin="0,10,0,5"
+                       FontWeight="Normal"/>
+                <PasswordBox Grid.Row="4" Height="26" Style="{StaticResource PasswordBoxStyle}"
+                         Password="" xxx:PasswordHelper.Attach="1" 
+                         xxx:PasswordHelper.Password="{Binding UserInfo.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Button Content="登  录" Grid.Row="5" Foreground="White" Height="28" Margin="0,10,0,5"
+                    Template="{StaticResource NormalButtonTemplate}" FontWeight="Normal"
+                    Command="{Binding LoginCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+
+                <CheckBox Content="记住密码" Foreground="#BBB" VerticalAlignment="Center"
+                      HorizontalAlignment="Left"
+                          VerticalContentAlignment="Center"
+                          FontSize="11" Grid.Row="6"/>
+                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6">
+                    <Hyperlink>找回密码</Hyperlink>
+                </TextBlock>
+            </Grid>
+
+            <TextBlock Text="{Binding ErrorMessage}" Grid.Column="1"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Center" TextAlignment="Center"
+                   FontSize="11" Foreground="Red" TextWrapping="Wrap" Margin="30,0,30,10"/>
+        </Grid>
+
+
+        <!--Loading动画-->
+        <zxc:Loading Visibility="{Binding IsLoading,Converter={StaticResource BooleanToVisibilityConverter}}" Message="{Binding LoadingMessage}"
+                     Background="Transparent"/>
+    </Grid>
+</Window>

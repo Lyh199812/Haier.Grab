@@ -1,0 +1,195 @@
+﻿<UserControl x:Class="Project.IMU.DataHub.Views.TestDataView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.IMU.DataHub.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/DataGridStyle2.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="TextBoxWithPlaceholderStyle" TargetType="TextBox">
+                <!-- 基本属性 -->
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Padding" Value="10,0" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Gray" />
+                <Setter Property="Background" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Grid>
+                                <!-- 圆角边框 -->
+                                <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10" />
+                                <!-- 显示占位符 -->
+                                <TextBlock x:Name="Placeholder"
+                               Text="{TemplateBinding Tag}"
+                               Foreground="Gray"
+                               Margin="12,0,0,0"
+                               VerticalAlignment="Center"
+                               Visibility="Collapsed"
+                               IsHitTestVisible="False" />
+                                <!-- 文本输入 -->
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                  Margin="2"
+                                  VerticalAlignment="Center" />
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <!-- 如果没有输入内容，显示占位符 -->
+                                <Trigger Property="Text" Value="">
+                                    <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
+                                </Trigger>
+                                <!-- 鼠标悬停时改变边框颜色 -->
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="#007ACC" />
+                                </Trigger>
+                                <!-- 获取焦点时改变边框颜色，并隐藏占位符 -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="#005A9E" />
+                                    <Setter TargetName="Placeholder" Property="Visibility" Value="Collapsed" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- 横线 -->
+            <RowDefinition Height="Auto" />
+            <!-- 数据展示区域 -->
+            <RowDefinition Height="*" />
+            <!-- 显示查询结果的文本 -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- 顶部工具栏：搜索项 -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,10,10,0">
+            <!-- 第一行：时间区间 -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="开始时间：" VerticalAlignment="Center" Margin="0,0,5,0" />
+                <DatePicker
+        SelectedDate="{Binding SearchStartDate, UpdateSourceTrigger=PropertyChanged}"
+        Width="150" Margin="5,0" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBox
+            Text="{Binding SearchStartHour, UpdateSourceTrigger=PropertyChanged}"
+            Width="40" Margin="5,0"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            MaxLength="2"
+            ToolTip="小时 (0-23)" />
+                    <TextBlock Text=":" VerticalAlignment="Center" />
+                    <TextBox
+            Text="{Binding SearchStartMinute, UpdateSourceTrigger=PropertyChanged}"
+            Width="40" Margin="5,0"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            MaxLength="2"
+            ToolTip="分钟 (0-59)" />
+                </StackPanel>
+
+                <TextBlock Text="结束时间：" VerticalAlignment="Center" Margin="10,0,5,0" />
+                <DatePicker
+        SelectedDate="{Binding SearchEndDate, UpdateSourceTrigger=PropertyChanged}"
+        Width="150" Margin="5,0" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBox
+            Text="{Binding SearchEndHour, UpdateSourceTrigger=PropertyChanged}"
+            Width="40" Margin="5,0"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            MaxLength="2"
+            ToolTip="小时 (0-23)" />
+                    <TextBlock Text=":" VerticalAlignment="Center" />
+                    <TextBox
+            Text="{Binding SearchEndMinute, UpdateSourceTrigger=PropertyChanged}"
+            Width="40" Margin="5,0"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            MaxLength="2"
+            ToolTip="分钟 (0-59)" />
+                </StackPanel>
+            </StackPanel>
+
+
+            <!-- 第二行：其他搜索项 -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBox
+                Text="{Binding SearchBatchID, UpdateSourceTrigger=PropertyChanged}"
+                Width="150" Margin="5"
+                Tag="批次ID" Style="{StaticResource TextBoxWithPlaceholderStyle}" />
+                <TextBox
+                Text="{Binding SearchStation, UpdateSourceTrigger=PropertyChanged}"
+                Width="150" Margin="5"
+                Tag="站点" Style="{StaticResource TextBoxWithPlaceholderStyle}" />
+                <TextBox
+                Text="{Binding SearchPosition, UpdateSourceTrigger=PropertyChanged}"
+                Width="100" Margin="5"
+                Tag="位置" Style="{StaticResource TextBoxWithPlaceholderStyle}" />
+                <TextBox
+                Text="{Binding SearchTestItem, UpdateSourceTrigger=PropertyChanged}"
+                Width="150" Margin="5"
+                Tag="测试项" Style="{StaticResource TextBoxWithPlaceholderStyle}" />
+                <TextBox
+                Text="{Binding SearchTestResult, UpdateSourceTrigger=PropertyChanged}"
+                Width="100" Margin="5"
+                Tag="测试结果" Style="{StaticResource TextBoxWithPlaceholderStyle}" />
+            </StackPanel>
+
+            <!-- 第三行：按钮 -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Button
+                Command="{Binding SearchCommand}"
+                Content="搜索" Width="80" Margin="5" Style="{StaticResource NormalButtonStyle2}" />
+                <Button
+                Command="{Binding RefreshCommand}"
+                Content="刷新" Width="80" Margin="5" Style="{StaticResource NormalButtonStyle2}" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 横线 -->
+        <Border Grid.Row="1" Height="1" Background="Gray" Margin="5" />
+        
+
+
+        <!-- 数据展示区域 -->
+        <DataGrid
+            Grid.Row="2"
+            Style="{StaticResource NormalDataGridStyle3}"
+            ItemsSource="{Binding TestDataList}"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="批次ID" Binding="{Binding BatchID}" Width="*" />
+                <DataGridTextColumn Header="站点" Binding="{Binding Station}" Width="*" />
+                <DataGridTextColumn Header="位置" Binding="{Binding PositionIndex}" Width="*" />
+                <DataGridTextColumn Header="条码" Binding="{Binding Barcode}" Width="*" />
+                <DataGridTextColumn Header="测试项" Binding="{Binding TestItem}" Width="*" />
+                <DataGridTextColumn Header="测试结果" Binding="{Binding TestResult}" Width="*" />
+                <DataGridTextColumn Header="测试时间" Binding="{Binding TestTime}" Width="*" />
+                <DataGridTextColumn Header="备注" Binding="{Binding Remarks}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <!-- 显示查询结果的文本 -->
+        <TextBlock Grid.Row="3" Text="{Binding SearchResult}" Foreground="Red" Margin="10,5" HorizontalAlignment="Center" />
+    </Grid>
+
+
+
+</UserControl>

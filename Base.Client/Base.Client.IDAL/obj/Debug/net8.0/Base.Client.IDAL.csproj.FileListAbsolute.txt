@@ -1,0 +1,12 @@
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\bin\Debug\net8.0\Base.Client.IDAL.deps.json
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\bin\Debug\net8.0\Base.Client.IDAL.dll
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\bin\Debug\net8.0\Base.Client.IDAL.pdb
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.AssemblyInfoInputs.cache
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.AssemblyInfo.cs
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.csproj.CoreCompileInputs.cache
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.sourcelink.json
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.dll
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\refint\Base.Client.IDAL.dll
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\Base.Client.IDAL.pdb
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.IDAL\obj\Debug\net8.0\ref\Base.Client.IDAL.dll

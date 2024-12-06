@@ -1,0 +1,213 @@
+﻿<UserControl x:Class="Base.Clent.HVisionModule.TemplateMatch.Views.NCCTemplateCreatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Base.Clent.HVisionModule.Preprocessing.Views"
+             
+             xmlns:halcon="clr-namespace:HalconDotNet;assembly=HalconDotNet"
+
+             xmlns:controls="clr-namespace:HVisionLibs.Shared.Controls;assembly=HVisionLibs.Shared"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Background="Black"
+             Foreground="White"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HVisionLibs.Shared;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+       
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="15"
+                Grid.Row="0">
+            <TextBlock FontSize="22"
+                   FontWeight="Bold"
+                   Text="{Binding Service.info.Name}"
+                   Foreground="White" />
+            <TextBlock Text="{Binding Service.info.Description}" 
+                       TextWrapping="Wrap"
+                       Foreground="White" />
+        </StackPanel>
+
+        <Border Grid.Row="1"
+            BorderBrush="White"
+            BorderThickness="0,1,0,0"
+            Margin="0,0,0,15" />
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="开始使用">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!--参数-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <StackPanel Margin="5,0">
+                                <Expander Header="图像源"
+                                      Foreground="White">
+                                    <Expander.Content>
+                                        <StackPanel Margin="0,5,5,5">
+                                            <Button Content="加载图像" Margin="0,0,0,5"
+                                                Command="{Binding LoadImageCommand}" />
+                                          
+                                        </StackPanel>
+                                    </Expander.Content>
+                                </Expander>
+
+                                <Expander Header="运行参数"
+                                      Foreground="White" Cursor="">
+                                    <Expander.Content>
+                                        <StackPanel>
+                                            <TextBlock Text="NumLevels" />
+                                            <ComboBox Margin="0,5,5,5"
+                                                      Padding="5"
+                                                      Text="{Binding Service.RunParameter.NumLevels}"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      Foreground="White">
+                                                <ComboBoxItem>auto</ComboBoxItem>
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                                <ComboBoxItem>4</ComboBoxItem>
+                                                <ComboBoxItem>5</ComboBoxItem>
+                                                <ComboBoxItem>6</ComboBoxItem>
+                                                <ComboBoxItem>7</ComboBoxItem>
+                                                <ComboBoxItem>8</ComboBoxItem>
+                                                <ComboBoxItem>9</ComboBoxItem>
+                                                <ComboBoxItem>10</ComboBoxItem>
+
+                                            </ComboBox>
+
+                                            <TextBlock Text="AngleStart" />
+                                            <TextBox Margin="0,5,5,5"
+                                                 Padding="5"
+                                                 Text="{Binding Service.RunParameter.AngleStart}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 Foreground="White" >
+                                            </TextBox>
+
+                                            <TextBlock Text="AngleExtent" />
+                                            <TextBox Margin="0,5,5,5"
+                                                     Padding="5"
+                                                     Text="{Binding Service.RunParameter.AngleExtent}"
+                                                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                     Foreground="White" >
+                                            </TextBox>
+
+                                            <TextBlock Text="AngleStep" />
+                                            <TextBox Margin="0,5,5,5"
+                                                     Padding="5"
+                                                     Text="{Binding Service.RunParameter.AngleStep}"
+                                                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                     Foreground="White" >
+                                            </TextBox>
+
+                                            <TextBlock Text="Metric " />
+                                            <ComboBox Margin="0,5,5,5"
+                                                      Padding="5"
+                                                      Text="{Binding Service.RunParameter.Metric }"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      Foreground="White">
+                                                <ComboBoxItem>use_polarity</ComboBoxItem>
+                                                <ComboBoxItem>ignore_global_polarity</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Expander.Content>
+                                </Expander>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <StackPanel Grid.Row="1"
+                                Margin="0,5,5,5">
+                            <Button Content="生成模板" Margin="0,5"
+                                Command="{Binding RunCommand}" />
+                            <Button Content="保存模板" 
+                                    Command="{Binding SaveImageCommand}" />
+                        </StackPanel>
+                    </Grid>
+                    <!--图像编辑器-->
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <controls:ImageEditView 
+                            Image="{Binding Image}"
+                            HWindow="{Binding Service.HWindow,Mode=TwoWay}"
+                            DrawObjectList="{Binding DrawObjectList}" />
+                        <TextBlock Grid.Row="2"
+                               Margin="5"
+                               Text="{Binding OperateResult.Message}" />
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="参数说明">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <ItemsControl Margin="15,5"
+                              ItemsSource="{Binding Service.info.Parameters}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,5,0,10">
+                                    <TextBlock Text="{Binding Name}"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           FontSize="14" />
+                                    <TextBlock Text="{Binding Description}"
+                                           Foreground="White"
+                                           Margin="20,5,0,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="关联算子">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl Margin="15,5"
+                              ItemsSource="{Binding Service.info.Predecessors}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,5,0,10">
+                                    <TextBlock Text="{Binding}"
+                                           Foreground="White" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+            <!--<TabItem Header="代码示例" />-->
+
+        </TabControl>
+    </Grid>
+</UserControl>

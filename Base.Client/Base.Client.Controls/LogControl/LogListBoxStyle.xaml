@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Base.Client.Controls">
+
+
+    <Style TargetType="Controls:LogListBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Controls:LogListBox">
+                    <Border Background="Black" CornerRadius="3">
+                        <Grid>
+                            <Grid.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem x:Name="PART_ClearLog" Header="清理数据" />
+                                </ContextMenu>
+                            </Grid.ContextMenu>
+                            <ListBox x:Name="PART_Lsb" ItemsSource="{Binding LogMessages, RelativeSource={RelativeSource TemplatedParent}}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Name="root" Background="Transparent" Margin="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Text="{Binding LogIcon}"
+                                                       Grid.Row="0" Grid.Column="0"
+                                                       Foreground="{Binding IconColor}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                            <TextBlock Text="{Binding LogTime, StringFormat=Ddd HH:mm:ss:fff}" 
+                                                       Grid.Row="0" Grid.Column="1"
+                                                       Margin="5,0"
+                                                       VerticalAlignment="Center"/>
+                                            <TextBlock Text="{Binding LogInfo}"
+                                                       Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2"                                                     
+                                                       Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

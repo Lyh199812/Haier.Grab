@@ -1,0 +1,988 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\BXC.Client.MinotorModule\\BXC.Client.MinotorModule.csproj": {}
+  },
+  "projects": {
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\BXC.Client.MinotorModule\\BXC.Client.MinotorModule.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\BXC.Client.MinotorModule\\BXC.Client.MinotorModule.csproj",
+        "projectName": "BXC.Client.MinotorModule",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\BXC.Client.MinotorModule\\BXC.Client.MinotorModule.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\BXC.Client.MinotorModule\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\DAL.EFCore.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\DAL.EFCore.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\Device.Communication.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\Device.Communication.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\Device.Helper.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\Device.Helper.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\Device.Models.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\Device.Models.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\SmartParking.Client.BLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\SmartParking.Client.BLL.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\SmartParking.Client.DAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\SmartParking.Client.DAL.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\SmartParking.Client.WPFAssets.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\SmartParking.Client.WPFAssets.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Extended.Wpf.Toolkit": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
+            "MiniExcel": {
+              "target": "Package",
+              "version": "[1.34.2, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\DAL.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\DAL.EFCore.csproj",
+        "projectName": "DAL.EFCore",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\DAL.EFCore.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\DAL.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\Device.Communication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\Device.Communication.csproj",
+        "projectName": "Device.Communication",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\Device.Communication.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Communication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj",
+        "projectName": "Device.DataConvertLib",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.DataConvertLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\Device.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\Device.Helper.csproj",
+        "projectName": "Device.Helper",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\Device.Helper.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Helper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\Device.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\Device.Models.csproj",
+        "projectName": "Device.Models",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\Device.Models.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\Device.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\SmartParking.Client.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\SmartParking.Client.BLL.csproj",
+        "projectName": "SmartParking.Client.BLL",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\SmartParking.Client.BLL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\SmartParking.Client.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\SmartParking.Client.Common.csproj",
+        "projectName": "SmartParking.Client.Common",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\SmartParking.Client.Common.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\SmartParking.Client.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\SmartParking.Client.DAL.csproj",
+        "projectName": "SmartParking.Client.DAL",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\SmartParking.Client.DAL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\SmartParking.Client.Common.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Common\\SmartParking.Client.Common.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj",
+        "projectName": "SmartParking.Client.Entity",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj",
+        "projectName": "SmartParking.Client.IBLL",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\SmartParking.Client.IBLL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IBLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj"
+              },
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj",
+        "projectName": "SmartParking.Client.IDAL",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\SmartParking.Client.IDAL.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.IDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.Entity\\SmartParking.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\SmartParking.Client.WPFAssets.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\SmartParking.Client.WPFAssets.csproj",
+        "projectName": "SmartParking.Client.WPFAssets",
+        "projectPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\SmartParking.Client.WPFAssets.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\宝新创.称重扫码\\BXC.WeighScan\\Client\\SmartParking.Client.WPFAssets\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.135, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

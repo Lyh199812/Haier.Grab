@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)Base.Client.Start\bin\$(Configuration)\net8.0-windows\Modules&quot; /i /s /y" />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Client.Assets\Base.Client.Assets.csproj" />
+    <ProjectReference Include="..\Base.Client.BLL\Base.Client.BLL.csproj" />
+    <ProjectReference Include="..\Base.Client.Common\Base.Client.Common.csproj" />
+    <ProjectReference Include="..\Base.Client.Controls\Base.Client.Controls.csproj" />
+    <ProjectReference Include="..\Base.Client.DAL\Base.Client.DAL.csproj" />
+    <ProjectReference Include="..\Base.Client.Entity\Base.Client.Entity.csproj" />
+    <ProjectReference Include="..\Base.Client.IBLL\Base.Client.IBLL.csproj" />
+    <ProjectReference Include="..\Base.Client.IDAL\Base.Client.IDAL.csproj" />
+  </ItemGroup>
+
+</Project>

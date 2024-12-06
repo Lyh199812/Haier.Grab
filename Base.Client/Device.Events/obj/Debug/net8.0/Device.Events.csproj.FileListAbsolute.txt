@@ -1,0 +1,6 @@
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.csproj.AssemblyReference.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.AssemblyInfoInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.AssemblyInfo.cs
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.csproj.CoreCompileInputs.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Events\obj\Debug\net8.0\Device.Events.sourcelink.json

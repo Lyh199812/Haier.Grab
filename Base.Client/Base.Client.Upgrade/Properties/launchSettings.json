@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Base.Client.Upgrade": {
+      "commandName": "Project",
+      "commandLineArgs": "Halcon算子手册(中文复印版).pdf|Modules|123|64259"
+    }
+  }
+}

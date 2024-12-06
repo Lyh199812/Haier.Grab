@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Prism.Unity" Version="9.0.537" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+    <PackageReference Include="Xceed.Wpf.Themes.MaterialDesign" Version="4.5.23158.1451" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HVisionLibs.Core\HVisionLibs.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\HVisionLibs.Core\ThirdDll\Halcon\halcondotnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

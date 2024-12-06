@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\HVisionLibs.Core\ThirdDll\Halcon\halcondotnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IBLL\Base\" />
+    <Folder Include="Models\Messages\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Controls\" />
+    <Folder Include="BLL\" />
+  </ItemGroup>
+
+</Project>

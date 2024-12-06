@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="Views\AddAutoColorDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddFeeModeDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddFileDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddLicenseColorDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddMenuDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddRoleDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddUserDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AutoColorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FeeModeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FileUploadView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LicenseColorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MenuManagementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ModifyRolesDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RoleManagementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SelectUserDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserManagementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

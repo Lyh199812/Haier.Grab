@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="Base.Client.BaseModule.Views.AddMenuDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Base.Client.BaseModule.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:converter="clr-namespace:Base.Client.Common.Converter;assembly=Base.Client.Common"
+             xmlns:font="clr-namespace:Base.Client.Assets.Fonts;assembly=Base.Client.Assets"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/BaseResources.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/TextBoxStyles.xaml"/>
+
+                <ResourceDictionary>
+                    <converter:Int2BoolConverter x:Key="Int2BoolConverter"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="Height" Value="400"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
+    <Grid Margin="0,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Title}" FontSize="20" VerticalAlignment="Center" Foreground="#888" Margin="10,0"/>
+
+        <Grid Grid.Row="1" Margin="20,10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Foreground="#888" Text="菜单名称" VerticalAlignment="Center"/>
+            <TextBlock Foreground="#888" Text="父节点" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBlock Foreground="#888" Text="菜单节点类型" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBlock Foreground="#888" Text="目标视图" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBlock Foreground="#888" Text="菜单图标" Grid.Row="4" VerticalAlignment="Center"/>
+
+            <TextBox Grid.Column="1" Height="33" Text="{Binding MenuInfo.MenuHeader}" Style="{StaticResource NormalTextBoxStyle}"/>
+            <ComboBox Grid.Column="1" Grid.Row="1" Height="34" ItemsSource="{Binding ParentNodes}"
+                      DisplayMemberPath="{Binding MenuHeader}"
+                      SelectedValuePath="{Binding MenuId}"
+                      SelectedItem="{Binding CurrentParentMenu}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding MenuHeader}" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+                <RadioButton Content="集合类型" GroupName="type1"
+                             IsChecked="{Binding MenuInfo.MenuType, ConverterParameter=1,Converter={StaticResource Int2BoolConverter}}"/>
+                <RadioButton Content="视图类型" Margin="10,0" GroupName="type2"
+                             IsChecked="{Binding MenuInfo.MenuType,ConverterParameter=0,Converter={StaticResource Int2BoolConverter}}"/>
+            </StackPanel>
+            <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource NormalTextBoxStyle}" 
+                     Text="{Binding MenuInfo.TargetView,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <!--选择图标-->
+            <!--关于图标：-->
+            <ComboBox Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Left" Template="{StaticResource ComboBoxEditableTemplate}" 
+                      ItemsSource="{Binding Path=(font:Iconfont.All)}" FontFamily="{StaticResource Iconfont}"
+                      SelectedItem="{Binding MenuInfo.MenuIcon}"
+                      Height="65" Width="110">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBoxItem"></Style>
+                </ComboBox.Resources>
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="10"/>
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="50" Height="50">
+                            <TextBlock Text="{Binding}" FontFamily="{StaticResource Iconfont}" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontSize="30" Foreground="#888"/>
+                        </Border>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="20,0">
+            <Button Content="确定" Width="100" Height="30" Margin="5,0" 
+                    Style="{StaticResource NormalButtonStyle}"
+                    Background="#FF0ABEFF"
+                    Command="{Binding ConfirmCommand}"/>
+            <Button Content="取消" Width="100" Height="30"
+                    Style="{StaticResource NormalButtonStyle}"
+                    Background="#DDD" Foreground="#666"
+                    Command="{Binding CancelCommand}"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

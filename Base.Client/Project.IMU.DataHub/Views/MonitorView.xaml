@@ -1,0 +1,333 @@
+﻿<UserControl x:Class="Project.IMU.DataHub.Views.MonitorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xcd="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:Project.IMU.DataHub.Views"
+             xmlns:controls="clr-namespace:Base.Client.Controls;assembly=Base.Client.Controls"
+             xmlns:controls2="clr-namespace:Base.Client.Controls;assembly=Base.Client.Controls"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="Iconfont">pack://application:,,,/Base.Client.Assets;component/Fonts/Iconfont.ttf#Iconfont</FontFamily>
+            <local:TextToBackgroundConverter  x:Key="TextToBackgroundConverter"/>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Base.Client.Controls;component/LogControl/LogListBoxStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Base.Client.Controls;component/InfoCand/ProductionInfoCardStyle.xaml" />
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/TextBoxStyles.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/DefaultToolBarTemplate.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/BaseResources.xaml"/>
+         
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Unloading-->
+        <GroupBox Header="Operator" Grid.Row="1" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--Row0 Tray Code-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row1 横线-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row2 穴位1 2-->
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <!--Row5 操作结果信息-->
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+               
+                <!--托盘码扫描-->
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!--下料-->
+                    <TextBox  Text="{Binding PassRate}"  Margin="2"
+                              VerticalContentAlignment="Center"
+                              Style="{StaticResource TextBoxWithPlaceholderStyle}" Tag="请输入托盘ID"/>
+                    <Button
+                        Content="下料" Margin="2"
+                        Grid.Column="1" Style="{StaticResource NormalButtonStyle2}" />
+                    <!--绑定-->
+                    <TextBox  Text="{Binding PassRate}"  Grid.Row="1" Margin="2" 
+                              IsEnabled="False"
+                              Background="Beige"
+                              VerticalContentAlignment="Center"
+                              Style="{StaticResource TextBoxWithPlaceholderStyle}"/>
+                    <Button
+                        Content="绑定" Margin="2"
+                        Grid.Column="1"  Grid.Row="1"
+                        Style="{StaticResource NormalButtonStyle2}" />
+                </Grid>
+               
+                
+                <!--横线-->
+                <Border Grid.Row="1"  Height="1"
+                        Grid.ColumnSpan="2"
+                        Background="Gray" Margin="5" >
+                </Border>
+                
+                
+                <!--穴位1-->
+                <Border   
+                    Grid.Row="2"
+                    Background="White" Padding="10" CornerRadius="10" Margin="5" BorderBrush="#cccccc" BorderThickness="1">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#000000" Direction="315" ShadowDepth="5" Opacity="0.2" BlurRadius="10"/>
+                    </Border.Effect>
+                    <!-- 显示查询结果的文本 -->
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition  Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        
+                          
+                        <DockPanel >
+                            <TextBlock Text="穴位 1:" FontSize="10"   VerticalAlignment="Center"/>
+                            <TextBox   HorizontalContentAlignment="Center" FontSize="12" Grid.Row="1" Margin="5,0" Style="{StaticResource NormalTextBoxStyle2}"/>
+                        </DockPanel>
+
+                        <Grid Grid.Row="2" Margin="0,5,5,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox  Text="PASS" FontWeight="Bold" Background="DarkBlue"
+                                      Style="{StaticResource NormalTextBoxStyle2}"
+                                      FontSize="12" 
+                                      HorizontalContentAlignment="Center"
+                                      VerticalContentAlignment="Center"
+                                      >
+                                <TextBox.Foreground>
+                                    <Binding Path="Text" RelativeSource="{RelativeSource Self}" Converter="{StaticResource TextToBackgroundConverter}" />
+                                </TextBox.Foreground>
+                            </TextBox>
+
+                            <TextBox  Text="已绑定" Grid.Column="1" FontWeight="Bold"
+                                      Style="{StaticResource NormalTextBoxStyle2}"
+                                      Background="DarkBlue"  
+                                      FontSize="12" 
+                                      HorizontalContentAlignment="Center"
+                                      VerticalContentAlignment="Center"
+                                      >
+                                <TextBox.Foreground>
+                                    <Binding Path="Text" RelativeSource="{RelativeSource Self}" Converter="{StaticResource TextToBackgroundConverter}" />
+                                </TextBox.Foreground>
+                            </TextBox>
+                      
+                        </Grid>
+                     
+                    </Grid>
+
+                </Border>
+
+                <!--穴位2-->
+
+                <ListBox>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBox  Text="12222"/>
+                                <Button  Content="123" Width="123"/>
+                                <Button/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBoxItem>
+                        
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="{Binding SearchResult}" Foreground="Red" Margin="10,5" HorizontalAlignment="Center" />
+            </Grid>
+            
+            
+        </GroupBox>
+       
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.6*"/>
+            </Grid.RowDefinitions>
+            <!--0,0-->
+            <GroupBox Header="Current Info" Margin="5">
+                <DataGrid 
+                    ItemsSource="{Binding InProgressBatches}"
+                    Style="{StaticResource NormalDataGridStyle3}">
+                    
+                </DataGrid>
+            </GroupBox>
+          
+       
+
+    
+
+            <!--1,0 1,1-->
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
+
+                <Grid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="重新计算" Command="{Binding ClearCommand}"/>
+                    </ContextMenu>
+                </Grid.ContextMenu>
+                <controls2:ProductionInfoCard 
+                Style="{StaticResource ProductionInfoCardStyle}"
+                DataContext="{Binding productionInfoCardBLL.currentProductionInfo}"
+                ProductionCount="{Binding ProductionCount}"
+                DefectiveCount= "{Binding DefectiveCount}"
+                PassRate=       "{Binding PassRate}"
+                UpdateTime=     "{Binding UpdateTime}"
+                StartTime=      "{Binding StartTime}"
+                >
+                    
+                </controls2:ProductionInfoCard>
+
+            </Grid>
+        </Grid>
+
+        <!--Server-->
+        <TabControl Style="{StaticResource NormalTabControlStyle}"
+                    Grid.Row="2" Grid.Column="0" Margin="5">
+            <TabItem Header="Server" >
+                <ContentControl Content="{Binding TcpServer}" Foreground="Black"/>
+
+            </TabItem>
+            <TabItem Header="Config">
+                <xcd:PropertyGrid 
+                    IsReadOnly="{Binding LogGridIsReadOnly}" SelectedObject="{Binding TestConfig}">
+                    <ContextMenuService.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="{Binding LogGridStatus}" Command="{Binding OnSetTestConfigStatusCommand}"/>
+                            <MenuItem Header="Save" Command="{Binding OnSaveTestConfigStatusCommand}"/>
+                        </ContextMenu>
+                    </ContextMenuService.ContextMenu>
+
+                </xcd:PropertyGrid>
+
+            </TabItem>
+            <TabItem Header="Device" >
+                <DataGrid ItemsSource="{Binding DeviceInfos}" IsReadOnly="True" Style="{StaticResource  NormalDataGridStyle3 }" >
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+
+        <!--Log-->
+        <GroupBox Grid.Row="2" Grid.Column="1" Margin="5"
+            Header="System Logs">
+            <controls:LogListBox 
+                       Margin="5"               
+                       LogMessages="{Binding runLogBLL.Logs}" 
+                       FontFamily="{StaticResource Iconfont}"/>
+        </GroupBox>
+
+        <!--Status Bar-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" TextBlock.FontSize="12" Margin="10,0"
+   Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center">
+            <TextBlock Text="设备状态：" VerticalAlignment="Center" Foreground="#888"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5,0">
+                <TextBlock Text="称重PLC" Foreground="#888"/>
+                <TextBlock Text="{Binding WeightConnectionStatus}" Margin="5,0">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <!-- 默认颜色，可以设置为任意值，例如灰色 -->
+                            <Setter Property="Foreground" Value="Gray"/>
+                            <Style.Triggers>
+                                <!-- 当 ConnectionStatus 等于 "连接正常" 时，将颜色设置为绿色 -->
+                                <DataTrigger Binding="{Binding WeightConnectionStatus}" Value="连接正常">
+                                    <Setter Property="Foreground" Value="Green"/>
+                                </DataTrigger>
+                                <!-- 当 ConnectionStatus 等于 "已断开" 时，将颜色设置为红色 -->
+                                <DataTrigger Binding="{Binding WeightConnectionStatus}" Value="已断开">
+                                    <Setter Property="Foreground" Value="Red"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  Margin="5,0">
+                <TextBlock Text="扫码PLC" Foreground="#888"/>
+                <TextBlock Text="{Binding ScanConnectionStatus}" Margin="5,0">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <!-- 默认颜色，可以设置为任意值，例如灰色 -->
+                            <Setter Property="Foreground" Value="Gray"/>
+                            <Style.Triggers>
+                                <!-- 当 ConnectionStatus 等于 "连接正常" 时，将颜色设置为绿色 -->
+                                <DataTrigger Binding="{Binding ScanConnectionStatus}" Value="连接正常">
+                                    <Setter Property="Foreground" Value="Green"/>
+                                </DataTrigger>
+                                <!-- 当 ConnectionStatus 等于 "已断开" 时，将颜色设置为红色 -->
+                                <DataTrigger Binding="{Binding ScanConnectionStatus}" Value="已断开">
+                                    <Setter Property="Foreground" Value="Red"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center"  Margin="5,0">
+    <TextBlock Text="相机" Foreground="#888"/>
+    <TextBlock Text="{Binding CamConnectionStatus}" Margin="5,0">
+        <TextBlock.Style>
+            <Style TargetType="TextBlock">
+                -->
+            <!-- 默认颜色，可以设置为任意值，例如灰色 -->
+            <!--
+                <Setter Property="Foreground" Value="Gray"/>
+                <Style.Triggers>
+                    -->
+            <!-- 当 ConnectionStatus 等于 "连接正常" 时，将颜色设置为绿色 -->
+            <!--
+                    <DataTrigger Binding="{Binding CamConnectionStatus}" Value="连接正常">
+                        <Setter Property="Foreground" Value="Green"/>
+                    </DataTrigger>
+                    -->
+            <!-- 当 ConnectionStatus 等于 "已断开" 时，将颜色设置为红色 -->
+            <!--
+                    <DataTrigger Binding="{Binding ScanConnectionStatus}" Value="已断开">
+                        <Setter Property="Foreground" Value="Red"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </TextBlock.Style>
+    </TextBlock>
+</StackPanel>-->
+
+        </StackPanel>
+   
+    </Grid>
+</UserControl>

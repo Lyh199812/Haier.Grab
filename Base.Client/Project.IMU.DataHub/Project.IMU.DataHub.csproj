@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+    <PackageReference Include="Prism.Unity" Version="9.0.537" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Client.Assets\Base.Client.Assets.csproj" />
+    <ProjectReference Include="..\Base.Client.Common\Base.Client.Common.csproj" />
+    <ProjectReference Include="..\Base.Client.Controls\Base.Client.Controls.csproj" />
+    <ProjectReference Include="..\Base.Client.DAL.EFCore\Base.Client.EFCore.csproj" />
+    <ProjectReference Include="..\Base.Client.DAL\Base.Client.DAL.csproj" />
+    <ProjectReference Include="..\Base.Client.Entity\Base.Client.Entity.csproj" />
+    <ProjectReference Include="..\Base.Client.IBLL\Base.Client.IBLL.csproj" />
+    <ProjectReference Include="..\Base.Client.Tools\Base.Client.Tools.csproj" />
+    <ProjectReference Include="..\Device.Controls\Device.CommLab.csproj" />
+    <ProjectReference Include="..\Device.Events\Device.Events.csproj" />
+    <ProjectReference Include="..\Device.Models\Device.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\BatchView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TestDataView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)Base.Client.Start\bin\$(Configuration)\net8.0-windows\Modules&quot; /i /s /y" />
+  </Target>
+
+</Project>

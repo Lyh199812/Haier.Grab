@@ -1,0 +1,5 @@
+E:\SoftLibs\WPF.SmartParking\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Assets.csproj.AssemblyReference.cache
+E:\SoftLibs\WPF.SmartParking\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\Themes\FontColor.baml
+E:\SoftLibs\WPF.SmartParking\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\Themes\Generic.baml
+E:\SoftLibs\WPF.SmartParking\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\SoftLibs\WPF.SmartParking\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Assets_MarkupCompile.cache

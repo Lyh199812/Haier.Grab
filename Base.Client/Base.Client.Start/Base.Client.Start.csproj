@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MiniExcel" Version="1.35.0" />
+    <PackageReference Include="Prism.Unity" Version="9.0.537" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Client.BLL\Base.Client.BLL.csproj" />
+    <ProjectReference Include="..\Base.Client.DAL.EFCore\Base.Client.EFCore.csproj" />
+    <ProjectReference Include="..\Base.Client.DAL\Base.Client.DAL.csproj" />
+    <ProjectReference Include="..\Base.Client.IBLL\Base.Client.IBLL.csproj" />
+    <ProjectReference Include="..\Base.Client.IDAL\Base.Client.IDAL.csproj" />
+    <ProjectReference Include="..\Base.Client.Tools\Base.Client.Tools.csproj" />
+    <ProjectReference Include="..\Device.Communication\Device.Communication.csproj" />
+    <ProjectReference Include="..\Device.Controls\Device.CommLab.csproj" />
+    <ProjectReference Include="..\Device.DataConvertLib\Device.DataConvertLib.csproj" />
+    <ProjectReference Include="..\Device.Events\Device.Events.csproj" />
+    <ProjectReference Include="..\Device.Helper\Device.Helper.csproj" />
+    <ProjectReference Include="..\Device.Models\Device.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Base.Client.Assets">
+      <HintPath>..\Base.Client.Assets\bin\Debug\net8.0-windows\Base.Client.Assets.dll</HintPath>
+    </Reference>
+    <Reference Include="Base.Client.Common">
+      <HintPath>..\Base.Client.Common\bin\Debug\net8.0-windows\Base.Client.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Base.Client.Controls">
+      <HintPath>..\Base.Client.Controls\bin\Debug\net8.0-windows\Base.Client.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Base.Client.Entity">
+      <HintPath>..\Base.Client.Entity\bin\Debug\net8.0\Base.Client.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="HVisionLibs.Core">
+      <HintPath>..\HVisionLibs.Core\bin\Debug\net8.0-windows\HVisionLibs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HVisionLibs.Shared">
+      <HintPath>..\HVisionLibs.Assets\bin\Debug\net8.0-windows\HVisionLibs.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

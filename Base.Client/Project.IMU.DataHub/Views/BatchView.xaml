@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="Project.IMU.DataHub.Views.BatchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.IMU.DataHub.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Base.Client.Assets;component/Styles/DataGridStyle2.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="TextBoxWithPlaceholderStyle" TargetType="TextBox">
+                <!-- 基本属性 -->
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Padding" Value="10,0" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Gray" />
+                <Setter Property="Background" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Grid>
+                                <!-- 圆角边框 -->
+                                <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10" />
+                                <!-- 显示占位符 -->
+                                <TextBlock x:Name="Placeholder"
+                               Text="{TemplateBinding Tag}"
+                               Foreground="Gray"
+                               Margin="12,0,0,0"
+                               VerticalAlignment="Center"
+                               Visibility="Collapsed"
+                               IsHitTestVisible="False" />
+                                <!-- 文本输入 -->
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                  Margin="2"
+                                  VerticalAlignment="Center" />
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <!-- 如果没有输入内容，显示占位符 -->
+                                <Trigger Property="Text" Value="">
+                                    <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
+                                </Trigger>
+                                <!-- 鼠标悬停时改变边框颜色 -->
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="#007ACC" />
+                                </Trigger>
+                                <!-- 获取焦点时改变边框颜色，并隐藏占位符 -->
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="#005A9E" />
+                                    <Setter TargetName="Placeholder" Property="Visibility" Value="Collapsed" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <!-- 设置栅格布局 -->
+        <Grid.RowDefinitions>
+            <!-- 顶部工具栏 -->
+            <RowDefinition Height="Auto" />
+            <!-- 横线 -->
+            <RowDefinition Height="Auto" />
+            <!-- 数据展示区域 -->
+            <RowDefinition Height="*" />
+            <!-- 显示查询结果的文本 -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- 顶部工具栏 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,0">
+            <!-- 当前站点 -->
+            <TextBox
+            Text="{Binding CurrentStationInput}"
+            Name="CurrentStationInput" Width="150" Margin="5"
+            Style="{StaticResource TextBoxWithPlaceholderStyle}"
+            Tag="请输入当前站点"/>
+
+            <!-- 托盘ID -->
+            <TextBox
+            Text="{Binding TrayIDInput}"
+            Name="TrayIDInput" Width="150" Margin="5"
+            Style="{StaticResource TextBoxWithPlaceholderStyle}"
+            Tag="请输入托盘ID"/>
+
+            <!-- 批次ID -->
+            <TextBox
+            Text="{Binding BatchIDInput}"
+            Name="BatchIDInput" Width="150" Margin="5"
+            Style="{StaticResource TextBoxWithPlaceholderStyle}"
+            Tag="请输入批次ID"/>
+
+            <!-- 状态 -->
+            <TextBox
+            Text="{Binding StatusInput}"
+            Name="StatusInput" Width="150" Margin="5"
+            Style="{StaticResource TextBoxWithPlaceholderStyle}"
+            Tag="请输入状态"/>
+
+            <!-- 搜索按钮 -->
+            <Button
+            Command="{Binding SearchCommand}"
+            Content="搜索" Width="80" Margin="5"
+            Style="{StaticResource NormalButtonStyle2}" />
+
+            <!-- 刷新按钮 -->
+            <Button 
+            Command="{Binding LoadCommand}"   
+            Content="刷新" Width="80" Margin="40,5"
+            Style="{StaticResource NormalButtonStyle2}" />
+        </StackPanel>
+
+        <!-- 横线 -->
+        <Border Grid.Row="1" Height="1" Background="Gray" Margin="5" />
+
+        <!-- 数据展示区域 -->
+        <DataGrid 
+    
+            Name="TrayDataGrid" 
+            Grid.Row="2"
+            FrozenColumnCount="1" 
+            ItemsSource="{Binding Trays}"
+            AutoGenerateColumns="False" 
+            Margin="10,5"
+            IsReadOnly="True"  
+            Style="{StaticResource NormalDataGridStyle3}" 
+            HorizontalScrollBarVisibility="Auto" 
+            VerticalScrollBarVisibility="Auto">
+
+            <DataGrid.Columns>
+                <!-- 当前批次号 -->
+                <DataGridTextColumn Header="批次ID" Binding="{Binding BatchID}" Width="120" />
+
+                <!-- 托盘ID -->
+                <DataGridTextColumn
+            Header="托盘ID" Binding="{Binding TrayID}" Width="120" />
+
+               
+                <!-- 创建时间 -->
+                <DataGridTextColumn Header="创建时间" Binding="{Binding CreationTime}" Width="150" />
+
+                <!-- 最近更新时间 -->
+                <DataGridTextColumn Header="最近更新时间" Binding="{Binding LastUpdatedTime}" Width="150" />
+
+               
+                <!-- 状态 -->
+                <DataGridTextColumn Header="状态" Binding="{Binding Status}" Width="80" />
+
+                <!-- 批次备注 -->
+                <DataGridTextColumn Header="批次备注" Binding="{Binding Remarks}" Width="200" />
+
+                <!-- 穴位1条码 -->
+                <DataGridTextColumn Header="穴位1条码" Binding="{Binding Position1Barcode}" Width="120" />
+
+                <!-- 穴位1结果 -->
+                <DataGridTextColumn Header="穴位1结果" Binding="{Binding Position1Result}" Width="80" />
+
+                <!-- 穴位2条码 -->
+                <DataGridTextColumn Header="穴位2条码" Binding="{Binding Position2Barcode}" Width="120" />
+
+                <!-- 穴位2结果 -->
+                <DataGridTextColumn Header="穴位2结果" Binding="{Binding Position2Result}" Width="80" />
+
+                <!-- 穴位3条码 -->
+                <DataGridTextColumn Header="穴位3条码" Binding="{Binding Position3Barcode}" Width="120" />
+
+                <!-- 穴位3结果 -->
+                <DataGridTextColumn Header="穴位3结果" Binding="{Binding Position3Result}" Width="80" />
+
+                <!-- 穴位4条码 -->
+                <DataGridTextColumn Header="穴位4条码" Binding="{Binding Position4Barcode}" Width="120" />
+
+                <!-- 穴位4结果 -->
+                <DataGridTextColumn Header="穴位4结果" Binding="{Binding Position4Result}" Width="80" />
+
+                <!-- 穴位5条码 -->
+                <DataGridTextColumn Header="穴位5条码" Binding="{Binding Position5Barcode}" Width="120" />
+
+                <!-- 穴位5结果 -->
+                <DataGridTextColumn Header="穴位5结果" Binding="{Binding Position5Result}" Width="80" />
+
+                <!-- 穴位6条码 -->
+                <DataGridTextColumn Header="穴位6条码" Binding="{Binding Position6Barcode}" Width="120" />
+
+                <!-- 穴位6结果 -->
+                <DataGridTextColumn Header="穴位6结果" Binding="{Binding Position6Result}" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        <!-- 显示查询结果的文本 -->
+        <TextBlock Grid.Row="3" Text="{Binding SearchResult}" Foreground="Red" Margin="10,5" HorizontalAlignment="Center" />
+    </Grid>
+
+
+</UserControl>

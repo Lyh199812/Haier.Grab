@@ -1,0 +1,148 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wfCtrl="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:wfHost="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"         
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"         
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:ha="http://schemas.mvtec.com/halcondotnet" x:Class="BasicDemoWPF.BasicDemoWindow" 
+    mc:Ignorable="d" 
+    d:DesignHeight="389" d:DesignWidth="703">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.618*" />
+            <ColumnDefinition Width="0.332*" />
+            <ColumnDefinition Width="0.05*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Equipment Id-->
+            <ComboBox Height="23" Margin="5,5,5,0" x:Name="cbDeviceList" VerticalAlignment="Top"/>
+            <!--DisPlay-->
+
+            <WindowsFormsHost   
+                x:Name="DisplayWindow"                                        
+                Margin="5"   Grid.Row="1"                     
+                IsEnabled="True"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="56*"/>
+                <ColumnDefinition Width="61*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--Search-->
+            <Button 
+                x:Name="bnEnum" 
+                Margin="5,5,5,0"   Grid.Column="0" Grid.ColumnSpan="3"
+                Click="bnEnum_Click" Content="查找设备"/>
+            <!--Open-->
+            <Button 
+                x:Name="bnOpen" 
+                Grid.Row="1" Grid.Column="0"  Margin="5,10,5,0" 
+                Click="bnOpen_Click" Content="打开设备" />
+
+            <!--Close-->
+            <Button
+                x:Name="bnClose"  
+                Margin="5,10,5,0" Grid.Row="1" Grid.Column="1"
+                Height="27" 
+                VerticalAlignment="Top" 
+                Click="bnClose_Click" IsEnabled="False" Content="关闭设备" Grid.ColumnSpan="2" />
+
+
+            <!--Continues Mode-->
+            <RadioButton 
+                x:Name="bnContinuesMode"
+                Height="16" 
+                Margin="5,25,5,0" Grid.Row="2" Grid.Column="0" 
+                Checked="bnContinuesMode_Checked" IsEnabled="False" Content="连续模式" />
+
+            <!--TrigerModel-->
+            <RadioButton 
+                Height="16" Margin="5,25,5,0" 
+                x:Name="bnTriggerMode"  Checked="bnTriggerMode_Checked" 
+                IsEnabled="False" Grid.Column="1" Grid.Row="2" Content="触发模式" Grid.ColumnSpan="2"/>
+
+            <!--Start Grab-->
+            <Button 
+                Margin="5,10,5,0" x:Name="bnStartGrab" 
+                Click="bnStartGrab_Click" IsEnabled="False" 
+                Grid.Row="3" Grid.Column="0" Height="30.821" Content="开始采集"/>
+
+            <!--Stop Grab-->
+            <Button Height="29.988" 
+                    Margin="5,11,5,0" x:Name="bnStopGrab"  Click="bnStopGrab_Click" IsEnabled="False" 
+                    Grid.Row="3" Grid.Column="1" Content="停止采集" Grid.ColumnSpan="2"/>
+            <!--CB Soft Trigger-->
+            <CheckBox Margin="5,23,5,0"
+                      x:Name="cbSoftTrigger"
+                      Checked="cbSoftTrigger_Checked" 
+                      IsEnabled="False" 
+                      Grid.Row="4" Grid.Column="0" Height="16" VerticalAlignment="Top" Content="软触发"/>
+
+            <!--Soft Trigger Once-->
+            <Button 
+                Margin="5,0,5,0" 
+                x:Name="bnTriggerExec"  Click="bnTriggerExec_Click" IsEnabled="False" 
+                Grid.Row="4" Grid.Column="1" Height="29" VerticalAlignment="Bottom" Content="软触发一次" Grid.ColumnSpan="2"/>
+
+            <!--Exposure-->
+            <Label
+                x:Name="label1" Height="28"
+                Margin="5,10,5,0"   
+                Grid.Row="5" Grid.Column="0" Content="曝光"/>
+            <TextBox Height="23.324"  Margin="5,13,5,2"   
+                     x:Name="tbExposure" IsEnabled="False"
+                     Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
+
+            <!--Gain-->
+            <Label Margin="5,10,5,0" x:Name="label2" 
+                   Grid.Row="6" Grid.Column="0" Height="28" VerticalAlignment="Top" Content="增益" Grid.RowSpan="2"/>
+            <TextBox 
+                x:Name="tbGain"
+                Height="23.324"  
+                Margin="5,12,5,2"   IsEnabled="False"
+                Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" />
+
+            <!--FrameRate-->
+            <Label Height="28" Margin="5,10,5,0" 
+                   x:Name="label3" VerticalAlignment="Top" 
+                   Grid.Row="7" Grid.Column="0" Content="帧率" Grid.RowSpan="2"/>
+            <TextBox 
+                Height="23"      
+                Margin="5,0,5,43"
+                x:Name="tbFrameRate" 
+                VerticalAlignment="Bottom"  IsEnabled="False"
+                Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+            <!--GetParam-->
+            <Button 
+                Height="23"     
+                Margin="5,20,5,0" x:Name="bnGetParam" 
+                Click="bnGetParam_Click" IsEnabled="False" 
+                Grid.Row="8"  Grid.Column="0" Content="获取参数" Grid.RowSpan="3"/>
+
+            <!--SetParam-->
+            <Button Height="23"  Margin="5,20,5,0" x:Name="bnSetParam" Click="bnSetParam_Click" IsEnabled="False" 
+                    Grid.Row="8" Grid.Column="1" Content="设置参数" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

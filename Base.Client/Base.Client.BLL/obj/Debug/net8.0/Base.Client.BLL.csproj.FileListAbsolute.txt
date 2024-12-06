@@ -1,0 +1,6 @@
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.csproj.AssemblyReference.cache
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.AssemblyInfoInputs.cache
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.AssemblyInfo.cs
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.csproj.CoreCompileInputs.cache
+E:\SoftLibs\ZhaoXi.SmartParking\Base.Client\Base.Client.BLL\obj\Debug\net8.0\Base.Client.BLL.sourcelink.json

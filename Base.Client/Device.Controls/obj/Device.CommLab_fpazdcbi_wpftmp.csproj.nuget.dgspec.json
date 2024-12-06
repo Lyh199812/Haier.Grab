@@ -1,0 +1,602 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Controls\\Device.CommLab.csproj": {}
+  },
+  "projects": {
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj",
+        "projectName": "Base.Client.Assets",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.135, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj",
+        "projectName": "Base.Client.Common",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj",
+        "projectName": "Base.Client.Entity",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\Base.Client.Entity.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\Device.Communication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\Device.Communication.csproj",
+        "projectName": "Device.Communication",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\Device.Communication.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj"
+              },
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj"
+              },
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Controls\\Device.CommLab.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Controls\\Device.CommLab.csproj",
+        "projectName": "Device.CommLab",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Controls\\Device.CommLab.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Controls\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Assets\\Base.Client.Assets.csproj"
+              },
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\Device.Communication.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Communication\\Device.Communication.csproj"
+              },
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj"
+              },
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj",
+        "projectName": "Device.DataConvertLib",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\Device.DataConvertLib.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.DataConvertLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj": {
+                "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Base.Client.Common\\Base.Client.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj",
+        "projectName": "Device.Events",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\Device.Events.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Events\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[9.0.537, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj",
+        "projectName": "Device.Models",
+        "projectPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\Device.Models.csproj",
+        "packagesPath": "C:\\Users\\LYH\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftLibs\\WPF.SmartParking\\Base.Client\\Device.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LYH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Client.BaseModule\Base.Client.BaseModule.csproj" />
+    <ProjectReference Include="..\Base.Client.Common\Base.Client.Common.csproj" />
+    <ProjectReference Include="..\HVisionLibs.Assets\HVisionLibs.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\HVisionLibs.Core\ThirdDll\Halcon\halcondotnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Preprocessing\Views\ZoomFactorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TemplateMatch\Views\ShapeTemplateSearcherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TemplateMatch\Views\ShapeTemplateCreatorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TemplateMatch\Views\NCCTemplateSearcherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TemplateMatch\Views\NCCTemplateCreatorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)Base.Client.Start\bin\$(Configuration)\net8.0-windows\Modules&quot; /i /s /y" />
+  </Target>
+
+</Project>

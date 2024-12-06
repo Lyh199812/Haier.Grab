@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Project.Modules.Datahub/1.0.0": {
+        "runtime": {
+          "Project.Modules.Datahub.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Project.Modules.Datahub/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
