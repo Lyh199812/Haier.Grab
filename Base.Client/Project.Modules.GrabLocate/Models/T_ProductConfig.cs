@@ -68,11 +68,15 @@ namespace Project.Modules.GrabLocate.Models
 
         [Description("X方向偏移")]
         [Category("定位")]
-        public int OffsetX { get; set; }
+        public double OffsetX { get; set; }
 
         [Description("Y方向偏移")]
         [Category("定位")]
-        public int OffsetY { get; set; }
+        public double OffsetY { get; set; }
+
+        [Description("角度偏移")]
+        [Category("定位")]
+        public double OffsetR { get; set; }
 
         //[Description("是否启用支撑棍位置检测")]
         //[Category("附加检测项目")]

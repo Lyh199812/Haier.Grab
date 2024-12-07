@@ -60,6 +60,7 @@ E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Devi
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.CommLab.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.CommLab.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.CommLab.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.CommLab.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.C.EDCBF189.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\Device.CommLab.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Controls\obj\Debug\net8.0-windows\refint\Device.CommLab.dll

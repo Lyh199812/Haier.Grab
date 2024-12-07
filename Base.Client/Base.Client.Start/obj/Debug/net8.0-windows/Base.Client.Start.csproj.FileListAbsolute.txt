@@ -511,6 +511,7 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Ba
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Client.Start.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Client.Start.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Client.Start.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Client.Start.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Cli.EF7A57B7.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\Base.Client.Start.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Start\obj\Debug\net8.0-windows\refint\Base.Client.Start.dll

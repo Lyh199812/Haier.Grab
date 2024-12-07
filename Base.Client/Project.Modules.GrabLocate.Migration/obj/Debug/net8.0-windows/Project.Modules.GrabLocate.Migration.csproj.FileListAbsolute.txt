@@ -207,3 +207,9 @@ E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.GrabLocate.Migration\ob
 E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.pdb
 E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.genruntimeconfig.cache
 E:\SoftLibs\WPF.SmartParking\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\ref\Project.Modules.GrabLocate.Migration.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.csproj.AssemblyReference.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.AssemblyInfoInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.AssemblyInfo.cs
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate.Migration\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.Migration.sourcelink.json

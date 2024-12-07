@@ -33,3 +33,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Clie
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\refint\Base.Client.Entity.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\ref\Base.Client.Entity.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.sourcelink.json

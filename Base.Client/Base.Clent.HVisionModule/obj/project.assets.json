@@ -3352,16 +3352,6 @@
       "targetGraphs": [
         "net8.0-windows7.0"
       ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "包 \"System.Data.SqlClient\" 4.8.1 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
     }
   ]
 }

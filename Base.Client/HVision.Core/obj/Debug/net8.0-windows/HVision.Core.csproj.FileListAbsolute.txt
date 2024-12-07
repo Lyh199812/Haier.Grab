@@ -27,3 +27,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\HVision.Core\obj\Debug\net8.0-windows\HVision
 E:\SoftLibs\Haier.Grab\Base.Client\HVision.Core\obj\Debug\net8.0-windows\refint\HVision.Core.dll
 E:\SoftLibs\Haier.Grab\Base.Client\HVision.Core\obj\Debug\net8.0-windows\HVision.Core.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\HVision.Core\obj\Debug\net8.0-windows\ref\HVision.Core.dll
+E:\SoftLibs\Haier.Grab\Base.Client\HVision.Core\obj\Debug\net8.0-windows\HVision.Core.sourcelink.json

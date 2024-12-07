@@ -194,7 +194,7 @@ namespace HVisionLibs.Shared.Controls
         private async void ClearAll()
         {
             DrawObjectList?.Clear();
-            
+            MaskObject = null;
             hWindow.ClearWindow();
             txtMeg.Text = "";
             if (Image!=null)
@@ -293,7 +293,7 @@ namespace HVisionLibs.Shared.Controls
             txtMeg.Text = "按鼠标左键绘制，右键结束";
             await Task.Run(() =>
             {
-                HOperatorSet.SetColor(hWindow, "red");
+                HOperatorSet.SetColor(hWindow, "yellow");
                 HOperatorSet.DrawRegion(out RegionObject,hWindow);
             });
             if (RegionObject == null) { return; }
@@ -304,6 +304,7 @@ namespace HVisionLibs.Shared.Controls
             });
             txtMeg.Text = String.Empty;
             MaskObject = RegionObject;
+
             HOperatorSet.GenContourRegionXld(RegionObject, out HObject contours, "border");
             HOperatorSet.DispObj(contours, hWindow);
         }
@@ -321,11 +322,26 @@ namespace HVisionLibs.Shared.Controls
             {
                 current = DrawObjectList[DrawObjectList.Count()-1];
                 
-
+                HObject ROI = null;
                 HObject imageReduced=null   ;
                 try
                 {
-                    HOperatorSet.ReduceDomain(Image, current.HObject, out  imageReduced); 
+                    if (MaskObject != null)
+                    {
+
+                        HOperatorSet.Difference(current.HObject, MaskObject, out ROI);
+
+                    }
+                    else
+                    {
+                        ROI = current.HObject;
+                    }
+                    //HOperatorSet.ReduceDomain(Image, current.HObject, out imageReduced);
+                    HOperatorSet.ReduceDomain(Image, ROI, out imageReduced);
+                    HOperatorSet.SetColor(hWindow, "green");
+
+                    HOperatorSet.DispObj(ROI, hWindow);
+
                 }
                 catch (Exception ex)
                 {

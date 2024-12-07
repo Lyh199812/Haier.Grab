@@ -58,8 +58,8 @@ namespace Base.Clent.HVisionModule.TemplateMatch.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;component/templatematch/views/shapetemplatecreatorview." +
-                    "xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;V1.0.0.0;component/templatematch/views/shapetemplatecre" +
+                    "atorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\TemplateMatch\Views\ShapeTemplateCreatorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

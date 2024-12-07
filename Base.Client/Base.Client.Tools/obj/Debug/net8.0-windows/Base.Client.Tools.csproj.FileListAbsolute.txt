@@ -33,3 +33,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Tools\obj\Debug\net8.0-windows\Ba
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Tools\obj\Debug\net8.0-windows\refint\Base.Client.Tools.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Tools\obj\Debug\net8.0-windows\Base.Client.Tools.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Tools\obj\Debug\net8.0-windows\ref\Base.Client.Tools.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Tools\obj\Debug\net8.0-windows\Base.Client.Tools.sourcelink.json

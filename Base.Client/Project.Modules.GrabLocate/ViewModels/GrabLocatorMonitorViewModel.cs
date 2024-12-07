@@ -253,6 +253,7 @@ namespace Project.Modules.GlueLocator.ViewModels
             }
         }
         #endregion
+
         #region 视觉引导
         public ShapeTemplateSearcherService Service { get; set; }
            
@@ -369,7 +370,17 @@ namespace Project.Modules.GlueLocator.ViewModels
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
             // 获取上一级目录
             string parentDirectory = Directory.GetParent(currentDirectory).Parent.FullName;
-            string ErrorImagePath = Path.Combine(parentDirectory, $@"{Mode}_Count{Count}_{(DateTime.Now.ToString("yyyyMMdd_HHmmss"))}.bmp");
+
+            // 创建 ErrorImage 文件夹和日期分类文件夹路径
+            string errorImageFolder = Path.Combine(parentDirectory, "ErrorImage");
+            string dateFolder = Path.Combine(errorImageFolder, DateTime.Now.ToString("yyyy-MM-dd"));
+
+            // 确保文件夹存在
+            Directory.CreateDirectory(dateFolder);
+
+            // 创建完整的文件路径
+            string ErrorImagePath = Path.Combine(dateFolder, $"{DateTime.Now:yyyyMMdd_HHmmss}_{Mode}_Count{Count}.bmp");
+
             try
             {
                 HOperatorSet.WriteImage(Image, "bmp", 0, ErrorImagePath);
@@ -427,8 +438,8 @@ namespace Project.Modules.GlueLocator.ViewModels
                 runLogBLL.AddInfoLog($"加载模板【{ProductConfig.ModelPath}】成功");
                 CurrentModePath = ProductConfig.ModelPath;
 
-                var rst= SetHandWidth(ProductConfig.GrbWidth);
-                if (rst.IsSuccess)
+                var rstSetHandWidth = SetHandWidth(ProductConfig.GrbWidth);
+                if (rstSetHandWidth.IsSuccess)
                 {
                     runLogBLL.AddSuccessLog($"设置对应宽度【{ProductConfig.GrbWidth}】完成");
                 }
@@ -494,7 +505,20 @@ namespace Project.Modules.GlueLocator.ViewModels
                     //}
                 }
             }
+            // 设置夹爪宽度
+            var rst = SetHandWidth(ProductConfig.GrbWidth);
+          
+            if (rst.IsSuccess)
+            {
+                runLogBLL.AddSuccessLog($"设置对应宽度【{ProductConfig.GrbWidth}】完成");
+            }
+            else
+            {
+                cts.Cancel();
+                runLogBLL.AddErrorLog($"设置对应宽度【{ProductConfig.GrbWidth}】失败-软件调整");
+                return OperateResult.CreateFailResult();
 
+            }
             // 设置坐标
             var result = SetReault(RunResaults);
             if (!result.IsSuccess)
@@ -546,20 +570,6 @@ namespace Project.Modules.GlueLocator.ViewModels
                                 runLogBLL.AddInfoLog($"加载模板成功: {prod.ModelPath}");
                                 CurrentModePath = prod.ModelPath;
 
-
-                                var rst = SetHandWidth(prod.GrbWidth);
-                                if (rst.IsSuccess)
-                                {
-                                    runLogBLL.AddSuccessLog($"设置对应宽度【{prod.GrbWidth}】完成");
-                                }
-                                else
-                                {
-                                    cts.Cancel();
-                                    runLogBLL.AddErrorLog($"设置对应宽度【{ProductConfig.GrbWidth}】失败-软件调整");
-                                    return OperateResult.CreateFailResult();
-
-                                }
-
                                 ProductConfig.IsSelected = false;
                                 prod.IsSelected = true;
                                 var update1 = productConfigService.UpdateProductConfig(ProductConfig);
@@ -609,10 +619,16 @@ namespace Project.Modules.GlueLocator.ViewModels
                 // 没有料的情况下，设置拍照结果
                 SetCaptureResultSignal("2");
                 runLogBLL.AddWarningLog("设置拍照结果[没料]完成");
-                SaveErrorImage(0, ProductConfig.Name);
                 return OperateResult.CreateSuccessResult();
             }
+            else
+            {
+                if(ActiveProductionConfigs != null)
+                {
+                    ActiveProductionConfigs = null;
+                }
 
+            }
             // 如果产品数量异常
             if (RunResaults.Count >0 && RunResaults.Count < ProductConfig.TargetCount)
             {
@@ -654,9 +670,7 @@ namespace Project.Modules.GlueLocator.ViewModels
             // 旋转变换，将坐标从图像坐标系转换到机器人坐标系
             runResault.RobotX = Math.Round(config.RobotBaseX + deltaX + ProductConfig.OffsetX, 3);
             runResault.RobotY = Math.Round(config.RobotBaseY + deltaY + ProductConfig.OffsetY, 3);
-
-            // 计算机器人角度，假设图像角度是与机器人基准角度叠加的
-            runResault.RobotAngle = config.RobotBaseAngle + runResault.Angle;  // 图像角度转换为机器人坐标系角度
+            runResault.RobotAngle= Math.Round(config.RobotBaseAngle + runResault.Angle + ProductConfig.OffsetR, 3);
         }
         public void DisplayMatchRender()
         {

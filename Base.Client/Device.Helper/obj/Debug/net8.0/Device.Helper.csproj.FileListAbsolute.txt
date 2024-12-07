@@ -49,13 +49,14 @@ E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Helper\obj\Debug\net8.0\Device.H
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Helper\obj\Debug\net8.0\refint\Device.Helper.dll
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.pdb
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Helper\obj\Debug\net8.0\ref\Device.Helper.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.deps.json
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.GeneratedMSBuildEditorConfig.editorconfig
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.sourcelink.json
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.deps.json
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\bin\Debug\net8.0\Device.Helper.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\refint\Device.Helper.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Helper\obj\Debug\net8.0\Device.Helper.pdb

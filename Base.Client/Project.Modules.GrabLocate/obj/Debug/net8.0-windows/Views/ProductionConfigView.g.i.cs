@@ -69,7 +69,7 @@ namespace Project.Modules.GrabLocate.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Project.Modules.GrabLocate;component/views/productionconfigview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Project.Modules.GrabLocate;V1.0.0.0;component/views/productionconfigview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ProductionConfigView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

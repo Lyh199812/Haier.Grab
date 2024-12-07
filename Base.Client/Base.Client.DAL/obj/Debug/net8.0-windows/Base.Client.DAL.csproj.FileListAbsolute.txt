@@ -61,6 +61,7 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Client.DAL.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Client.DAL.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Client.DAL.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Client.DAL.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Cli.A976D5B5.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\Base.Client.DAL.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL\obj\Debug\net8.0-windows\refint\Base.Client.DAL.dll

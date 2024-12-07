@@ -36,6 +36,7 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Bas
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Client.IDAL.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Client.IDAL.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Client.IDAL.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Client.IDAL.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Cli.4D010781.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\Base.Client.IDAL.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.IDAL\obj\Debug\net8.0-windows\refint\Base.Client.IDAL.dll

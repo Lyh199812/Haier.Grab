@@ -72,7 +72,7 @@ namespace Project.Modules.GlueLocator.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Project.Modules.GrabLocate;component/views/grablocatormonitorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Project.Modules.GrabLocate;V1.0.0.0;component/views/grablocatormonitorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\GrabLocatorMonitorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

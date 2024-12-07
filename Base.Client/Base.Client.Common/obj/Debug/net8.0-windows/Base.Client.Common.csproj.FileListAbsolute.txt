@@ -45,3 +45,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Common\obj\Debug\net8.0-windows\B
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Common\obj\Debug\net8.0-windows\refint\Base.Client.Common.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Common\obj\Debug\net8.0-windows\Base.Client.Common.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Common\obj\Debug\net8.0-windows\ref\Base.Client.Common.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Common\obj\Debug\net8.0-windows\Base.Client.Common.sourcelink.json

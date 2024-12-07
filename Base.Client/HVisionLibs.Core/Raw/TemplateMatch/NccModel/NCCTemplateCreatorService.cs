@@ -53,48 +53,50 @@ namespace HVisionLibs.Core.TemplateMatch.NccModel
 
 
 
-       
 
 
-        public HOperateResult Run(HObject image,HObject ROIObj)
+
+        public HOperateResult Run(HObject image, HObject ROIObj)
         {
             const string ImageError = "图片异常!";
             const string ROIError = "ROI未设置!";
             const string ModeError = "参数异常!";
-            if(nccModel!=null)
+
+            // 清理旧的 NCC 模型（如果存在）
+            if (nccModel != null)
             {
                 nccModel.ClearHandle();
                 nccModel = null;
             }
 
-
+            // 检查图像和 ROI 是否为 null
             if (image == null)
                 return HOperateResult.CreateFailResult(ImageError);
-            if(ROIObj == null)
+            if (ROIObj == null)
                 return HOperateResult.CreateFailResult(ROIError);
-            // 检查运行参数的有效性
+
+            // 检查运行参数是否有效
             if (RunParameter.NumLevels == null || RunParameter.AngleStart == 0 || RunParameter.AngleExtent == 0)
                 return HOperateResult.CreateFailResult(ModeError);
 
-            // 使用 using 语句以确保资源正确释放
             try
             {
-                HOperatorSet.ReduceDomain(image, ROIObj,out HObject imageReduced);
+                // 限制图像区域
+                HOperatorSet.ReduceDomain(image, ROIObj, out HObject imageReduced);
+
+                // 创建 NCC 模型
                 HOperatorSet.CreateNccModel(imageReduced, RunParameter.NumLevels, RunParameter.AngleStart, RunParameter.AngleExtent, RunParameter.AngleStep, RunParameter.Metric, out nccModel);
 
-                // 处理 NCC 模型的结果（如果需要）
-                // 例如，可以保存模型或将其返回
-
                 // 返回成功结果
-                return new HOperateResult() { IsSuccess = true ,Message="生成NCC模板成功" };
+                return new HOperateResult() { IsSuccess = true, Message = "生成NCC模板成功" };
             }
             catch (Exception ex)
             {
-                return HOperateResult.CreateFailResult($"执行失败: {ex.ToString()}");
+                // 捕获异常并返回失败结果
+                return HOperateResult.CreateFailResult($"执行失败: {ex.Message}\n{ex.StackTrace}");
             }
-
-            return new HOperateResult { IsSuccess = true, Message = "NCC 模型创建成功" };
         }
+
 
         /// <summary>
         /// <summary>

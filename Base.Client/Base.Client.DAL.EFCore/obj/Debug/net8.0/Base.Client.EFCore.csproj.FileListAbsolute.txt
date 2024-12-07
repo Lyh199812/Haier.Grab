@@ -24,6 +24,7 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Client.EFCore.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Client.EFCore.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Client.EFCore.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Client.EFCore.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Cli.316EF307.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\Base.Client.EFCore.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.DAL.EFCore\obj\Debug\net8.0\refint\Base.Client.EFCore.dll

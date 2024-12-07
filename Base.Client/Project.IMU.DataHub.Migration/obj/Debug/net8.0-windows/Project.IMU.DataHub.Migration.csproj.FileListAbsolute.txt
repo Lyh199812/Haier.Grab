@@ -403,3 +403,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\Project.IMU.DataHub.Migration\obj\Debug\net8.
 E:\SoftLibs\Haier.Grab\Base.Client\Project.IMU.DataHub.Migration\obj\Debug\net8.0-windows\Project.IMU.DataHub.Migration.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Project.IMU.DataHub.Migration\obj\Debug\net8.0-windows\Project.IMU.DataHub.Migration.genruntimeconfig.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Project.IMU.DataHub.Migration\obj\Debug\net8.0-windows\ref\Project.IMU.DataHub.Migration.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Project.IMU.DataHub.Migration\obj\Debug\net8.0-windows\Project.IMU.DataHub.Migration.sourcelink.json

@@ -21,7 +21,7 @@ namespace Project.Modules.GrabLocate
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=127.0.0.1;Database=haier_grab_db;User=root;Password=kc123456;Port=3306;Charset=utf8;TreatTinyAsBoolean=false;",
+            optionsBuilder.UseMySql("Server=127.0.0.1;Database=haier_grab_db2;User=root;Password=kc123456;Port=3306;Charset=utf8;TreatTinyAsBoolean=false;",
            new MySqlServerVersion(new Version(8, 0, 36)));
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

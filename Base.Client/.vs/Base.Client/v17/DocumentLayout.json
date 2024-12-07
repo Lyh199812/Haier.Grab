@@ -7,28 +7,8 @@
       "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\viewmodels\\grablocatormonitorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\models\\t_productconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\models\\t_productconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59BE1A10-4B46-4092-9F9F-CA97CC1BE8B6}|Base.Client.BLL\\Base.Client.BLL.csproj|e:\\softlibs\\haier.grab\\base.client\\base.client.bll\\base.client.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{59BE1A10-4B46-4092-9F9F-CA97CC1BE8B6}|Base.Client.BLL\\Base.Client.BLL.csproj|solutionrelative:base.client.bll\\base.client.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC5FB276-4773-4A67-80D8-CBFB74ABCD67}|HVisionLibs.Assets\\HVisionLibs.Shared.csproj|e:\\softlibs\\haier.grab\\base.client\\hvisionlibs.assets\\controls\\imageeditview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC5FB276-4773-4A67-80D8-CBFB74ABCD67}|HVisionLibs.Assets\\HVisionLibs.Shared.csproj|solutionrelative:hvisionlibs.assets\\controls\\imageeditview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\third\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\third\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\views\\grablocatormonitorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\views\\grablocatormonitorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA49201A-021B-4CAE-8558-9E61C87376F0}|Device.Camera.HK.Demo\\BasicDemoWPF.csproj|e:\\softlibs\\haier.grab\\base.client\\device.camera.hk.demo\\basicdemowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AA49201A-021B-4CAE-8558-9E61C87376F0}|Device.Camera.HK.Demo\\BasicDemoWPF.csproj|solutionrelative:device.camera.hk.demo\\basicdemowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\efccore\\grabdbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\efccore\\grabdbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,71 +18,19 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "T_ProductConfig.cs",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Models\\T_ProductConfig.cs",
-              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\Models\\T_ProductConfig.cs",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Models\\T_ProductConfig.cs",
-              "RelativeToolTip": "Project.Modules.GrabLocate\\Models\\T_ProductConfig.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAiwDwAAAAmAAAAAAAAAA==",
+              "Title": "GrabDBConfig.cs",
+              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
+              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
+              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
+              "RelativeToolTip": "Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvw4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T03:57:50.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Base.Client.BLL",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj",
-              "RelativeDocumentMoniker": "Base.Client.BLL\\Base.Client.BLL.csproj",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Base.Client.BLL\\Base.Client.BLL.csproj",
-              "RelativeToolTip": "Base.Client.BLL\\Base.Client.BLL.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-06T03:46:35.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ImageEditView.cs",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\HVisionLibs.Assets\\Controls\\ImageEditView.cs",
-              "RelativeDocumentMoniker": "HVisionLibs.Assets\\Controls\\ImageEditView.cs",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\HVisionLibs.Assets\\Controls\\ImageEditView.cs",
-              "RelativeToolTip": "HVisionLibs.Assets\\Controls\\ImageEditView.cs",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAywMkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T02:57:07.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Third\\CameraController.cs",
-              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\Third\\CameraController.cs",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Third\\CameraController.cs",
-              "RelativeToolTip": "Project.Modules.GrabLocate\\Third\\CameraController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAowFwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T02:32:23.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BasicDemoWindow.xaml",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Device.Camera.HK.Demo\\BasicDemoWindow.xaml",
-              "RelativeDocumentMoniker": "Device.Camera.HK.Demo\\BasicDemoWindow.xaml",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Device.Camera.HK.Demo\\BasicDemoWindow.xaml",
-              "RelativeToolTip": "Device.Camera.HK.Demo\\BasicDemoWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-06T02:30:18.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T17:29:09.008Z"
             },
             {
               "$type": "Document",
@@ -112,21 +40,9 @@
               "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
               "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
               "RelativeToolTip": "Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
-              "ViewState": "AgIAALcBAAAAAAAAAAD4v84BAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABwCAAAAAAAAAADwv20CAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T07:26:18.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GrabLocatorMonitorView.xaml",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
-              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
-              "RelativeToolTip": "Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-03T06:22:26.443Z",
+              "WhenOpened": "2024-12-06T16:38:53.38Z",
               "EditorCaption": ""
             }
           ]

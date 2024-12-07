@@ -53,7 +53,8 @@ namespace Project.Modules.GlueLocator.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Project.Modules.GlueLocator;component/views/pgluelocatormonitorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Project.Modules.GlueLocator;V1.0.0.0;component/views/pgluelocatormonitorview.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PGlueLocatorMonitorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

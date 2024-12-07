@@ -58,7 +58,7 @@ namespace Base.Clent.HVisionModule.Preprocessing.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;component/preprocessing/views/mirrorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;V1.0.0.0;component/preprocessing/views/mirrorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Preprocessing\Views\MirrorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

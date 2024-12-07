@@ -202,3 +202,4 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BaseModule\obj\Debug\net8.0-windo
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BaseModule\obj\Debug\net8.0-windows\Base.Client.BaseModule.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BaseModule\obj\Debug\net8.0-windows\Base.Client.BaseModule.genruntimeconfig.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BaseModule\obj\Debug\net8.0-windows\ref\Base.Client.BaseModule.dll
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BaseModule\obj\Debug\net8.0-windows\Base.Client.BaseModule.sourcelink.json
