@@ -22,12 +22,6 @@ E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Communication\obj\Debug\net8.0-w
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Communication\obj\Debug\net8.0-windows\refint\Device.Communication.dll
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.pdb
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.Communication\obj\Debug\net8.0-windows\ref\Device.Communication.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.csproj.AssemblyReference.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.GeneratedMSBuildEditorConfig.editorconfig
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.AssemblyInfoInputs.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.AssemblyInfo.cs
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.csproj.CoreCompileInputs.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Device.Communication.deps.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Device.Communication.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Device.Communication.pdb
@@ -41,6 +35,12 @@ E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Device.Models.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Base.Client.Common.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\bin\Debug\net8.0-windows\Base.Client.Entity.pdb
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.csproj.AssemblyReference.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.AssemblyInfoInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.AssemblyInfo.cs
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.C.00A79BB5.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\Device.Communication.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Communication\obj\Debug\net8.0-windows\refint\Device.Communication.dll

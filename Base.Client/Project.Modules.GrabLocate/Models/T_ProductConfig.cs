@@ -44,7 +44,7 @@ namespace Project.Modules.GrabLocate.Models
 
         [Description("关联型号")]
         [Category("基本信息")]
-        public string AssociatedModel { get; set; }
+        public string AssociatedModel { get; set; } = "";
 
         // 模型路径
         [Description("模型文件的路径")]

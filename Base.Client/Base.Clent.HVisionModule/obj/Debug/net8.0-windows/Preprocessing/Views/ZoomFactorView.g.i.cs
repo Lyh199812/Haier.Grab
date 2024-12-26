@@ -58,8 +58,7 @@ namespace Base.Clent.HVisionModule.Preprocessing.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;V1.0.0.0;component/preprocessing/views/zoomfactorview.x" +
-                    "aml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Base.Clent.HVisionModule;component/preprocessing/views/zoomfactorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Preprocessing\Views\ZoomFactorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

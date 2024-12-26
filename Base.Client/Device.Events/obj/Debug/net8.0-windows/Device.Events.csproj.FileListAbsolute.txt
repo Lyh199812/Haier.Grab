@@ -19,8 +19,8 @@ E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\refint\Device.Events.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\ref\Device.Events.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Events\obj\Debug\net8.0-windows\Device.Events.sourcelink.json

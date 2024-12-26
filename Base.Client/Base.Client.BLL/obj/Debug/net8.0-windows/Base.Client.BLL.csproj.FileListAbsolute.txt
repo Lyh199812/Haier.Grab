@@ -52,9 +52,9 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Cli.9B27BC3B.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\refint\Base.Client.BLL.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\ref\Base.Client.BLL.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.BLL\obj\Debug\net8.0-windows\Base.Client.BLL.sourcelink.json

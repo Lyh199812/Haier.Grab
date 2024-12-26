@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 2601035588285
 Views\BatchView.xaml;Views\MonitorView.xaml;Views\TestDataView.xaml;Views\TrayView.xaml;
 
-True
+False
 

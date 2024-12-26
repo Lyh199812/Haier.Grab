@@ -57,7 +57,7 @@ namespace Base.Client.BaseModule.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Base.Client.BaseModule;V1.0.0.0;component/views/fileuploadview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Base.Client.BaseModule;component/views/fileuploadview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\FileUploadView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

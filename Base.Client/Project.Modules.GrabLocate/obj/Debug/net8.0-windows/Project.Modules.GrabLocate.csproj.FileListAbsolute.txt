@@ -111,10 +111,10 @@ E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-w
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project..75620EB3.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\refint\Project.Modules.GrabLocate.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.genruntimeconfig.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\ref\Project.Modules.GrabLocate.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Project.Modules.GrabLocate\obj\Debug\net8.0-windows\Project.Modules.GrabLocate.sourcelink.json

@@ -38,9 +38,9 @@ E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\H
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionL.C564F2BB.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.dll
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\refint\HVisionLibs.Shared.dll
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\ref\HVisionLibs.Shared.dll
-E:\SoftLibs\Haier.Grab\Base.Client\HVisionLibs.Assets\obj\Debug\net8.0-windows\HVisionLibs.Shared.sourcelink.json

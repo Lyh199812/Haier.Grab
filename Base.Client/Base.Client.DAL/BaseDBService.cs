@@ -121,7 +121,9 @@ namespace Base.Client.DAL
 
         public IQueryable<T> QueryAsTracking<T>(Expression<Func<T, bool>> funcWhere) where T : class
         {
-            return dbContext.Set<T>().Where(funcWhere);
+            dbContext.ChangeTracker.Clear();
+
+            return dbContext.Set<T>().AsTracking().Where(funcWhere);
         }
 
         public OperateResult Update<T>(T entity) where T : class

@@ -29,8 +29,8 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Clie
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\refint\Base.Client.Entity.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\ref\Base.Client.Entity.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Entity\obj\Debug\net8.0\Base.Client.Entity.sourcelink.json

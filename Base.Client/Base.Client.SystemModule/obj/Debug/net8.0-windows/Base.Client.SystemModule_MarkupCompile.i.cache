@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 250775650341
 Views\MainHeaderView.xaml;Views\TreeMenuView.xaml;
 
-False
+True
 

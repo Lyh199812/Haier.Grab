@@ -8,6 +8,7 @@ using Microsoft.Win32;
 using HVisionLibs.Core;
 using System.Windows.Media.Media3D;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace HVisionLibs.Shared.Controls
 {
@@ -413,6 +414,11 @@ namespace HVisionLibs.Shared.Controls
 
             return new HOperateResult { IsSuccess = true, Message = $"Shape模板成功保存到: {filePath}" };
         }
+
+
+        #region Tips
+       
+        #endregion
 
     }
 }

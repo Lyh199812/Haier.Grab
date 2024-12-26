@@ -53,8 +53,8 @@ E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\refint\Device.Models.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\ref\Device.Models.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.Models\obj\Debug\net8.0\Device.Models.sourcelink.json

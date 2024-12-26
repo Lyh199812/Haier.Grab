@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Project.Modules.GrabLocate.ViewModels
@@ -19,7 +20,6 @@ namespace Project.Modules.GrabLocate.ViewModels
         private string _productConfigIDInput;
         private string _newProductConfigName;
         private string _searchResult;
-        private T_ProductConfig _selectedProductConfig;
 
         public ProductionConfigViewModel(ProductConfigService productConfigService, IUnityContainer unityContainer, IRegionManager regionManager)
             : base(unityContainer, regionManager)
@@ -34,6 +34,7 @@ namespace Project.Modules.GrabLocate.ViewModels
             SelectCommand = new DelegateCommand(SelectProductConfig);
             CreateCommand = new DelegateCommand(CreateProductConfig);
             RefreshCommand = new DelegateCommand(RefreshProductConfigs);
+            DeleteCommand= new DelegateCommand(DeleteProductConfig);
         }
 
         // 输入框 ProductConfig ID 输入的绑定
@@ -42,6 +43,23 @@ namespace Project.Modules.GrabLocate.ViewModels
             get => _productConfigIDInput;
             set => SetProperty(ref _productConfigIDInput, value);
         }
+
+
+        private T_ProductConfig _CurProductConfig;
+        public T_ProductConfig CurProductConfig
+        {
+            get { return _CurProductConfig; }
+            set 
+            {
+                _CurProductConfig = value;
+                if(value != null)
+                {
+                    ProductConfigIDInput= value.Id.ToString();
+                }
+                RaisePropertyChanged(); 
+            }
+        }
+
 
         // 新建 ProductConfig Name 输入框的绑定
         public string NewProductConfigName
@@ -173,6 +191,42 @@ namespace Project.Modules.GrabLocate.ViewModels
             RefreshProductConfigs();
         }
 
+        //删除配方
+        public DelegateCommand DeleteCommand { get; }
+        private void DeleteProductConfig()
+        {
+            if (!string.IsNullOrEmpty(ProductConfigIDInput))
+            {
+                var rst1 = _productConfigService.FindProductConfig(int.Parse(ProductConfigIDInput));
+                if (rst1.IsSuccess && rst1.Content != null)
+                {
+                    var selectedConfig = rst1.Content;
+                    // 只有未选中的配方可删除
+                    if (selectedConfig.IsSelected)
+                    {
+                        SearchResult = "不能删除被选中的配方";
+                        return;
+                    }
+                    if(MessageBox.Show($"是否确认删除配方 ID【{ProductConfigIDInput}】 名称:{selectedConfig.Name}" +
+                        $"\r\n关联型号：{selectedConfig.AssociatedModel}","删除警告",MessageBoxButton.OKCancel)!=MessageBoxResult.OK)
+                    {
+                        return;
+                    }
+                    var result = _productConfigService.DeleteProductConfig(int.Parse (ProductConfigIDInput));
+                    SearchResult = result.Message;
+                    RefreshProductConfigs();
+
+                }
+                else
+                {
+                    SearchResult = "未找到匹配的产品配置";
+                }
+            }
+            else
+            {
+                SearchResult = "请输入有效的配方 ID";
+            }
+        }
 
         // 新建命令
         public DelegateCommand CreateCommand { get; }
@@ -193,6 +247,9 @@ namespace Project.Modules.GrabLocate.ViewModels
                         Name = NewProductConfigName,
                         ModelPath = SelectedProductConfig.ModelPath,
                         MinScore = SelectedProductConfig.MinScore,
+                        MinScoreForCheck = SelectedProductConfig.MinScoreForCheck,
+                        TargetCount = SelectedProductConfig.TargetCount,
+
                         IsActive = true,
                         IsSelected = false
                     };
@@ -224,6 +281,7 @@ namespace Project.Modules.GrabLocate.ViewModels
             if (result.IsSuccess)
             {
                 ProductConfigs.Clear();
+
                 foreach (var config in result.Content)
                 {
                     ProductConfigs.Add(config);

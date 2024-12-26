@@ -91,7 +91,8 @@ namespace Project.Modules.GrabLocate
         {
             try
             {
-                var productConfigs = _productConfigDAL.QueryAsTracking<T_ProductConfig>(c => true).ToList();
+                _productConfigDAL.dbContext.ChangeTracker.Clear();
+                var productConfigs = _productConfigDAL.Query<T_ProductConfig>(c => true).OrderByDescending(x => x.IsSelected).ThenBy(x => x.Id).ToList();
                 if (productConfigs == null || productConfigs.Count == 0)
                 {
                     return new OperateResult<List<T_ProductConfig>> { IsSuccess = false, Message = "未找到任何产品配置", ErrorCode = 10014, Content = null };
@@ -151,7 +152,7 @@ namespace Project.Modules.GrabLocate
         {
             try
             {
-                var productConfig = _productConfigDAL.Query<T_ProductConfig>(x => x.Id == id).FirstOrDefault();
+                var productConfig = _productConfigDAL.QueryAsTracking<T_ProductConfig>(x => x.Id == id).FirstOrDefault();
                 if (productConfig == null)
                 {
                     return new OperateResult { IsSuccess = false, Message = "未找到对应的产品配置", ErrorCode = 10020 };

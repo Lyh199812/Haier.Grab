@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 2011145376522
 CircularProgressBar.xaml;InfoCand\ProductionInfoCardStyle.xaml;Loading.xaml;LogControl\LogListBoxStyle.xaml;Pagination.xaml;
 
-True
+False
 

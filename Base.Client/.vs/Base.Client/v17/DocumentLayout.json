@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\viewmodels\\grablocatormonitorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\efccore\\grabdbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\efccore\\grabdbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15091891-910A-4B7C-92A9-89B143E1FFF5}|Base.Client.Start\\Base.Client.Start.csproj|e:\\softlibs\\haier.grab\\base.client\\base.client.start\\viewmodels\\messageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15091891-910A-4B7C-92A9-89B143E1FFF5}|Base.Client.Start\\Base.Client.Start.csproj|solutionrelative:base.client.start\\viewmodels\\messageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\views\\grablocatormonitorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\views\\grablocatormonitorview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|e:\\softlibs\\haier.grab\\base.client\\project.modules.grablocate\\models\\tooltipinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C18ED57-3DDD-440A-9524-D20523244EF5}|Project.Modules.GrabLocate\\Project.Modules.GrabLocate.csproj|solutionrelative:project.modules.grablocate\\models\\tooltipinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +30,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GrabDBConfig.cs",
-              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
-              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
-              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
-              "RelativeToolTip": "Project.Modules.GrabLocate\\EFCCore\\GrabDBConfig.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvw4AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TooltipInfo.cs",
+              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Models\\TooltipInfo.cs",
+              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\Models\\TooltipInfo.cs",
+              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Models\\TooltipInfo.cs",
+              "RelativeToolTip": "Project.Modules.GrabLocate\\Models\\TooltipInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T17:29:09.008Z"
+              "WhenOpened": "2024-12-17T14:42:23.227Z"
             },
             {
               "$type": "Document",
@@ -40,10 +48,33 @@
               "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
               "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
               "RelativeToolTip": "Project.Modules.GrabLocate\\ViewModels\\GrabLocatorMonitorViewModel.cs",
-              "ViewState": "AgIAABwCAAAAAAAAAADwv20CAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T16:38:53.38Z",
+              "WhenOpened": "2024-12-17T14:42:17.622Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GrabLocatorMonitorView.xaml",
+              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
+              "RelativeDocumentMoniker": "Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
+              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
+              "RelativeToolTip": "Project.Modules.GrabLocate\\Views\\GrabLocatorMonitorView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T14:39:19.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageViewModel.cs",
+              "DocumentMoniker": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Base.Client.Start\\ViewModels\\MessageViewModel.cs",
+              "RelativeDocumentMoniker": "Base.Client.Start\\ViewModels\\MessageViewModel.cs",
+              "ToolTip": "E:\\SoftLibs\\Haier.Grab\\Base.Client\\Base.Client.Start\\ViewModels\\MessageViewModel.cs",
+              "RelativeToolTip": "Base.Client.Start\\ViewModels\\MessageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:38:39.758Z"
             }
           ]
         }

@@ -46,10 +46,10 @@ E:\SoftLibs\WPF.SmartParking\Base.Client\Base.Client.Assets\obj\Debug\net8.0-win
 E:\SoftLibs\WPF.SmartParking\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\refint\Base.Client.Assets.dll
 E:\SoftLibs\WPF.SmartParking\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Base.Client.Assets.pdb
 E:\SoftLibs\WPF.SmartParking\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\ref\Base.Client.Assets.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Base.Client.Assets.csproj.AssemblyReference.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\bin\Debug\net8.0-windows\Base.Client.Assets.deps.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\bin\Debug\net8.0-windows\Base.Client.Assets.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\bin\Debug\net8.0-windows\Base.Client.Assets.pdb
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Base.Client.Assets.csproj.AssemblyReference.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Styles\BaseResources.baml
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Styles\ButtonStyles.baml
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Client.Assets\obj\Debug\net8.0-windows\Styles\ComboBoxStyle.baml

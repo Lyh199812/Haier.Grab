@@ -103,10 +103,10 @@ E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-win
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.AssemblyInfoInputs.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.AssemblyInfo.cs
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Cle.B707DCC4.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\refint\Base.Clent.HVisionModule.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.genruntimeconfig.cache
 E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\ref\Base.Clent.HVisionModule.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Base.Clent.HVisionModule\obj\Debug\net8.0-windows\Base.Clent.HVisionModule.sourcelink.json

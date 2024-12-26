@@ -10,6 +10,7 @@
                     <Grid Background="Black">
                         <Grid.ContextMenu>
                             <ContextMenu>
+                               
                                 <MenuItem Header="形状">
                                     <MenuItem x:Name="PART_RECT" Header="绘制矩形" />
                                     <MenuItem x:Name="PART_Ellipse" Header="绘制椭圆" />
@@ -29,6 +30,13 @@
                                    VerticalAlignment="Top"
                                    Foreground="White" />
 
+                        <!-- TextBlock to display coordinates and gray value -->
+                        <Popup IsOpen="{Binding IsPopupOpen}" Placement="Mouse" StaysOpen="False">
+                            <TextBlock Background="LightYellow" 
+                                       Padding="5" FontSize="16" 
+                                       Text="{Binding PopupContent}" />
+                        </Popup>
+                        <!-- Initially hidden -->
                         <halcon:HSmartWindowControlWPF x:Name="PART_SMART" />
                     </Grid>
                 </ControlTemplate>

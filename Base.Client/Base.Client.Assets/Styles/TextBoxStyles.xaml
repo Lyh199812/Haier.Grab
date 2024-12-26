@@ -219,7 +219,6 @@
                         <!-- 获取焦点时改变边框颜色，并隐藏占位符 -->
                         <Trigger Property="IsFocused" Value="True">
                             <Setter TargetName="Border" Property="BorderBrush" Value="#005A9E" />
-                            <Setter TargetName="Placeholder" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

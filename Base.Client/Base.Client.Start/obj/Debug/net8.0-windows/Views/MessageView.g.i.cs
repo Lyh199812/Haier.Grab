@@ -60,7 +60,7 @@ namespace Base.Client.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Base.Client.Start;V1.0.0.0;component/views/messageview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Base.Client.Start;component/views/messageview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\MessageView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

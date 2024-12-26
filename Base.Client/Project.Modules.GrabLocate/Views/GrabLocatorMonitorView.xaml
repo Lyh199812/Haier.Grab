@@ -59,6 +59,28 @@
                     <RowDefinition />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
+                <Grid.InputBindings>
+                    <MouseBinding Gesture="Alt+LeftClick" Command="{Binding SingleClickCommand}" />
+                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DoubleClickCommand}" />
+                </Grid.InputBindings>
+                <Popup 
+                     IsOpen="{Binding TooltipInfo.IsVisible}" 
+                     Placement="MousePoint"
+                     >
+                     <Border Background="LightYellow" BorderBrush="Black" BorderThickness="1">
+                         <TextBlock Text="{Binding TooltipInfo.Text}" Padding="5"/>
+                     </Border>
+                 </Popup>
+                <!--<Popup 
+                    IsOpen="{Binding TooltipInfo.IsVisible}" 
+                    HorizontalOffset="{Binding TooltipInfo.Position.X}" 
+                    VerticalOffset="{Binding TooltipInfo.Position.Y}"
+                    Placement="AbsolutePoint"
+                    >
+                    <Border Background="LightYellow" BorderBrush="Black" BorderThickness="1">
+                        <TextBlock Text="{Binding TooltipInfo.Text}" Padding="5"/>
+                    </Border>
+                </Popup>-->
                 <Hcontrols:ImageEditView 
                     Image="{Binding Image}"
                     HWindow="{Binding Service.HWindow,Mode=TwoWay}"

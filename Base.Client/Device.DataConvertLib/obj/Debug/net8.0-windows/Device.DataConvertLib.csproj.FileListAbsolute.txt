@@ -16,12 +16,6 @@ E:\SoftLibs\WPF.SmartParking\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\refint\Device.DataConvertLib.dll
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.pdb
 E:\SoftLibs\WPF.SmartParking\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\ref\Device.DataConvertLib.dll
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.csproj.AssemblyReference.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.GeneratedMSBuildEditorConfig.editorconfig
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.AssemblyInfoInputs.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.AssemblyInfo.cs
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.csproj.CoreCompileInputs.cache
-E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Device.DataConvertLib.deps.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Device.DataConvertLib.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Device.DataConvertLib.pdb
@@ -29,6 +23,12 @@ E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-window
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Base.Client.Entity.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Base.Client.Common.pdb
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\bin\Debug\net8.0-windows\Base.Client.Entity.pdb
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.csproj.AssemblyReference.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.AssemblyInfoInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.AssemblyInfo.cs
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.csproj.CoreCompileInputs.cache
+E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.sourcelink.json
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.D.8E6C5CE7.Up2Date
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\Device.DataConvertLib.dll
 E:\SoftLibs\Haier.Grab\Base.Client\Device.DataConvertLib\obj\Debug\net8.0-windows\refint\Device.DataConvertLib.dll

@@ -35,6 +35,8 @@ using System.IO;
 using Project.Modules.GrabLocate.DAL;
 using System.Windows.Navigation;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Windows.Input;
+using System.Linq.Expressions;
 
 namespace Project.Modules.GlueLocator.ViewModels
 {
@@ -46,6 +48,7 @@ namespace Project.Modules.GlueLocator.ViewModels
         public GrabLocatorMonitorViewModel(ProductConfigService _productConfigService, CommonConfigService _commonConfig, IRunLogBLL _runLogBLL, CameraController _cameraController, IUnityContainer unityContainer, IRegionManager regionManager, ShapeTemplateSearcherService mirrorService, IRoleBLL roleBLL, IUserBLL userBLL, IMenuBLL menuBLL)
     : base(unityContainer, regionManager)
         {
+
             this.PageTitle = "抓取引导";
             this.IsCanClose = false;
             runLogBLL = _runLogBLL;
@@ -109,6 +112,12 @@ namespace Project.Modules.GlueLocator.ViewModels
 
             //开始
             LoadInfo();
+           
+
+            //坐标信息
+            TooltipInfo = new TooltipInfo() { IsVisible=false, Position =new Point()};
+            SingleClickCommand = new DelegateCommand(HandleSingleClick);
+            DoubleClickCommand = new DelegateCommand(HandleDoubleClick);
 
         }
 
@@ -162,7 +171,19 @@ namespace Project.Modules.GlueLocator.ViewModels
             {
 
                 MessageBox.Show("保存成功");
+                var rstproductConfig = productConfigService.GetCurrentConfig();
+                if (rstproductConfig.IsSuccess)
+                {
+                    ProductConfig = rstproductConfig.Content;
+                    runLogBLL.AddSuccessLog("重新加载产品配置成功");
+                }
+                else
+                {
+                    runLogBLL.AddErrorLog("重新加载产品配置失败" + rstproductConfig.Message);
+                    cts.Cancel();
+                    return;
 
+                }
             }
             else
             {
@@ -255,6 +276,76 @@ namespace Project.Modules.GlueLocator.ViewModels
         #endregion
 
         #region 视觉引导
+
+
+        #region -GetPixelValue
+        public DelegateCommand SingleClickCommand { get; }
+        public DelegateCommand DoubleClickCommand { get; }
+        private void HandleSingleClick()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                // 假设 TooltipInfo 已定义并用于显示信息
+                TooltipInfo.IsVisible = false;
+            RaisePropertyChanged("TooltipInfo");
+
+            TooltipInfo.IsVisible = true;
+
+            // 检查图像是否已加载
+            if (Image != null)
+            {
+                HObject hv_Image = Image;   // 你的图像对象
+
+                // 获取鼠标点击位置
+                HTuple hv_Row, hv_Col,hv_button;
+                HOperatorSet.GetMposition(Service.HWindow, out hv_Row, out hv_Col, out hv_button);
+                Point clickPosition = new Point((int)hv_Row, (int)hv_Col);
+
+                // 获取鼠标当前屏幕坐标
+                //int screenX = Cursor.;  // 获取鼠标 X 坐标（屏幕坐标）
+                //int screenY = Cursor.Position.Y;  // 获取鼠标 Y 坐标（屏幕坐标）
+
+                //// 设置 TooltipInfo 的位置为鼠标点击的位置
+                //TooltipInfo.Position = clickPosition;
+
+                // 获取图像的尺寸（宽度和高度）
+                HTuple hv_Width, hv_Height;
+                HOperatorSet.GetImageSize(hv_Image, out hv_Width, out hv_Height);
+
+                // 判断点击位置是否在图像范围内
+                if (clickPosition.X >= 0 && clickPosition.X < hv_Width && clickPosition.Y >= 0 && clickPosition.Y < hv_Height)
+                {
+                 
+                    // 画一个十字准星，大小可以根据需要调整
+
+                        // 点击位置在图像范围内，获取灰度值
+                        HTuple hv_GrayValue;
+                        HOperatorSet.GetGrayval(hv_Image, (int)hv_Row, (int)hv_Col, out hv_GrayValue);
+                        Service.HWindow.SetColor("red");
+                        Service.HWindow.DispCross(hv_Row, hv_Col, 40, 0);
+                        // 更新 TooltipInfo，显示灰度值
+                        TooltipInfo.Text = $"You clicked here! (Row:{hv_Row}, Col:{hv_Col})\nGray value: {hv_GrayValue.D.ToString("F3")}";
+                
+                }
+                else
+                {
+                    // 点击位置超出图像范围，显示提示信息
+                    TooltipInfo.Text = $"You clicked outside the image boundaries! ({clickPosition.X}, {clickPosition.Y}) at {DateTime.Now}";
+                }
+
+                // 更新 Tooltip 信息
+                RaisePropertyChanged("TooltipInfo");
+            }
+            });
+        }
+
+        private void HandleDoubleClick()
+        {
+            TooltipInfo.IsVisible=false;
+            RaisePropertyChanged("TooltipInfo");
+
+        }
+        #endregion
         public ShapeTemplateSearcherService Service { get; set; }
            
         private ObservableCollection<RunResault> _RunResaults=new ObservableCollection<RunResault>();
@@ -283,6 +374,7 @@ namespace Project.Modules.GlueLocator.ViewModels
             get { return _HResult; }
             set { _HResult = value; RaisePropertyChanged(); }
         }
+
         private MatchResult matchResult;
         public MatchResult MatchResults
         {
@@ -318,12 +410,22 @@ namespace Project.Modules.GlueLocator.ViewModels
         }
 
         private HObject maskObject;
-
         public HObject MaskObject
         {
             get { return maskObject; }
             set { maskObject = value; RaisePropertyChanged(); }
         }
+
+        private TooltipInfo _tooltipInfo;
+        public TooltipInfo TooltipInfo
+        {
+            get { return _tooltipInfo; }
+            set
+            {
+                SetProperty(ref _tooltipInfo, value);
+            }
+        }
+
 
         /// <summary>
         /// 加载图像
@@ -345,8 +447,6 @@ namespace Project.Modules.GlueLocator.ViewModels
                 Image = img;
             }
         }
-
-
         public void Save()
         {
             var rst= SaveCurrentImage();
@@ -360,6 +460,7 @@ namespace Project.Modules.GlueLocator.ViewModels
 
             }
         }
+
         private OperateResult SaveCurrentImage()
         {
             return SaveErrorImage(0, "保存");
@@ -405,7 +506,6 @@ namespace Project.Modules.GlueLocator.ViewModels
                 }
             }
         }
-
         private void LoadMode(string FileName)
         {
             HResult = Service.LoadShapeModelFromPath(FileName);
@@ -417,6 +517,12 @@ namespace Project.Modules.GlueLocator.ViewModels
         {
             Run();
         }
+
+
+        //reduce domin and re search
+        // 用于存储所有裁剪区域的列表
+        List<HObject> allRegions = null;
+
 
         /// <summary>
         /// 执行
@@ -505,6 +611,7 @@ namespace Project.Modules.GlueLocator.ViewModels
                     //}
                 }
             }
+
             // 设置夹爪宽度
             var rst = SetHandWidth(ProductConfig.GrbWidth);
           
@@ -632,7 +739,16 @@ namespace Project.Modules.GlueLocator.ViewModels
             // 如果产品数量异常
             if (RunResaults.Count >0 && RunResaults.Count < ProductConfig.TargetCount)
             {
-                
+                //Service.HWindow.SetDraw("margin");
+                //foreach( var a in allRegions)
+                //{
+                //    Service.HWindow.DispObj(a);
+
+                //}
+                //HOperatorSet.ReduceDomain(image, allRegions[3], out HObject imageReduced);
+                //var MatchResults2 = Service.Run(imageReduced);
+
+
                 var rstSave = SaveErrorImage(RunResaults.Count, ProductConfig.Name);
                 if (rstSave?.IsSuccess == true)
                 {
@@ -680,6 +796,7 @@ namespace Project.Modules.GlueLocator.ViewModels
             }
             if (MatchResults.Results != null)
             {
+                allRegions = new List <HObject>();
                 foreach (var item in MatchResults.Results)
                 {
                     if (MatchResults.Setting.IsShowCenter)
@@ -707,7 +824,39 @@ namespace Project.Modules.GlueLocator.ViewModels
                         }
 
                         Service.HWindow.DispObj(item.Contours);
+                        // 假设item.Contours是一个包含多个轮廓的集合（例如HObject类型的数组）
+                        HObject region = null;
+                        HObject tempRegion = null;
+
+                        // 将每个轮廓转换为区域并合并
+                        for (int i = 0; i < item.Contours.CountObj(); i++)
+                        {
+                            // 将当前轮廓转换为区域
+                            HOperatorSet.GenRegionContourXld(item.Contours[i+1], out tempRegion, "filled");
+
+                            // 合并当前区域到总区域
+                            if (region == null)
+                            {
+                                region = tempRegion;
+                            }
+                            else
+                            {
+                                HOperatorSet.Union2(region, tempRegion, out region);
+                            }
+                        }
+                        HOperatorSet.SmallestRectangle2(region
+                            , out HTuple row, out HTuple column, out HTuple phi
+                            , out HTuple length1, out HTuple length2);
+                        // 根据SmallestRectangle2的结果生成矩形区域
+                        HObject rectRegion;
+                        HOperatorSet.GenRectangle2(out rectRegion, row, column, phi, length1+100, length2 + 100);
+
+                        allRegions.Add(rectRegion);
+
+
                     }
+
+
                 }
             }
 
